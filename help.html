@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Help - Halverson Speedway Marketing Tool</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Racing+Sans+One&family=Oswald:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body class="bg-gray-100">
+    <header class="bg-black text-white">
+        <div class="container mx-auto px-4 py-2">
+            <div class="flex justify-between items-center">
+                <div class="flex items-center">
+                    <div class="text-2xl font-bold text-red-600 font-racing">
+                        Halverson Speedway Marketing Tool
+                    </div>
+                </div>
+                <nav class="hidden md:block">
+                    <ul class="flex space-x-4">
+                        <li><a href="index.html" class="text-white hover:text-yellow-400">Templates</a></li>
+                        <li><a href="strategies.html" class="text-white hover:text-yellow-400">Strategies</a></li>
+                        <li><a href="help.html" class="text-yellow-400 hover:text-white">Help</a></li>
+                    </ul>
+                </nav>
+                <div class="md:hidden">
+                    <button id="mobile-menu-button" class="text-white">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden bg-gray-900">
+            <ul class="px-4 py-2">
+                <li><a href="index.html" class="block py-2 text-white">Templates</a></li>
+                <li><a href="strategies.html" class="block py-2 text-white">Strategies</a></li>
+                <li><a href="help.html" class="block py-2 text-yellow-400">Help</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <main class="container mx-auto px-4 py-8">
+        <div class="bg-white rounded-lg shadow p-4 mb-6">
+            <h1 class="text-2xl font-bold mb-2 text-red-600 font-racing">Help & Documentation</h1>
+            <p class="text-gray-600 mb-4">Learn how to use the Halverson Speedway Marketing Tool to create professional marketing materials.</p>
+        </div>
+
+        <div class="flex flex-col md:flex-row">
+            <!-- Sidebar -->
+            <div class="w-full md:w-1/4 mb-6 md:mb-0 md:pr-4">
+                <div class="bg-white rounded-lg shadow p-4 category-sidebar">
+                    <h2 class="text-xl font-bold mb-4 text-red-600 font-oswald">HELP TOPICS</h2>
+                    <ul class="space-y-2">
+                        <li><a href="#getting-started" class="category-link block p-2 bg-red-600 text-white rounded font-oswald">Getting Started</a></li>
+                        <li><a href="#template-browser" class="category-link block p-2 hover:bg-gray-100 rounded font-oswald">Template Browser</a></li>
+                        <li><a href="#template-editor" class="category-link block p-2 hover:bg-gray-100 rounded font-oswald">Template Editor</a></li>
+                        <li><a href="#image-upload" class="category-link block p-2 hover:bg-gray-100 rounded font-oswald">Image Upload</a></li>
+                        <li><a href="#text-editing" class="category-link block p-2 hover:bg-gray-100 rounded font-oswald">Text Editing</a></li>
+                        <li><a href="#exporting" class="category-link block p-2 hover:bg-gray-100 rounded font-oswald">Exporting Designs</a></li>
+                        <li><a href="#strategies" class="category-link block p-2 hover:bg-gray-100 rounded font-oswald">Using Strategies</a></li>
+                        <li><a href="#faq" class="category-link block p-2 hover:bg-gray-100 rounded font-oswald">FAQ</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Main Content -->
+            <div class="w-full md:w-3/4">
+                <div class="bg-white rounded-lg shadow p-4">
+                    <!-- Getting Started Section -->
+                    <section id="getting-started" class="mb-8">
+                        <h2 class="text-2xl font-bold mb-4 text-red-600 font-racing checkered-header">GETTING STARTED</h2>
+                        
+                        <div class="mb-6">
+                            <h3 class="text-xl font-bold mb-2 font-oswald">Welcome to the Halverson Speedway Marketing Tool</h3>
+                            <p class="mb-4">This tool allows you to create professional marketing materials for Halverson Speedway events using pre-designed templates. Here's how to get started:</p>
+                            
+                            <ol class="list-decimal pl-5 space-y-2">
+                                <li><strong>Browse Templates:</strong> Start by exploring the available templates on the home page. Templates are organized by category (Race Results, Bus Races, Silver 1000, etc.).</li>
+                                <li><strong>Select a Template:</strong> Click on a template that matches your needs to view details, then click "Customize" to open it in the editor.</li>
+                                <li><strong>Customize Your Design:</strong> Use the editor tools to modify text, colors, images, and layout to fit your specific event.</li>
+                                <li><strong>Export Your Design:</strong> When you're satisfied with your design, export it in your preferred format (PNG, JPG, PDF, or SVG).</li>
+                                <li><strong>Share Your Creation:</strong> Use your exported design on social media, in emails, or on the Halverson Speedway website.</li>
+                            </ol>
+                        </div>
+                        
+                        <div class="mb-6">
+                            <h3 class="text-xl font-bold mb-2 font-oswald">System Requirements</h3>
+                            <p class="mb-4">The Halverson Speedway Marketing Tool works best with:</p>
+                            
+                            <ul class="list-disc pl-5 space-y-2">
+                                <li><strong>Browsers:</strong> Chrome, Firefox, Safari, or Edge (latest versions)</li>
+                                <li><strong>Devices:</strong> Desktop, laptop, or tablet (mobile phones supported but limited functionality)</li>
+                                <li><strong>Internet:</strong> Stable internet connection required</li>
+                                <li><strong>Screen Resolution:</strong> Minimum 1024x768 recommended</li>
+                            </ul>
+                        </div>
+                    </section>
+                    
+                    <!-- Template Browser Section -->
+                    <section id="template-browser" class="mb-8">
+                        <h2 class="text-2xl font-bold mb-4 text-red-600 font-racing checkered-header">TEMPLATE BROWSER</h2>
+                        
+                        <div class="mb-6">
+                            <h3 class="text-xl font-bold mb-2 font-oswald">Finding the Right Template</h3>
+                            <p class="mb-4">The template browser is your starting point for creating marketing materials:</p>
+                            
+                            <ul class="list-disc pl-5 space-y-2">
+                                <li><strong>Categories:</strong> Templates are organized by category in the sidebar. Click a category to filter templates.</li>
+                                <li><strong>Preview:</strong> Each template card shows a preview image and description of the template's purpose.</li>
+                                <li><strong>Platform:</strong> Templates are designed for specific platforms (Facebook, Instagram, Twitter, Email, Website).</li>
+                                <li><strong>Customize:</strong> Click the "Customize" button on any template to open it in the editor.</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="mb-6">
+                            <h3 class="text-xl font-bold mb-2 font-oswald">Template Categories</h3>
+                            <p class="mb-4">Available template categories include:</p>
+                            
+                            <ul class="list-disc pl-5 space-y-2">
+                                <li><strong>Race Results:</strong> Templates for sharing race outcomes on various platforms</li>
+                                <li><strong>Bus Races:</strong> Templates for promoting the Bus Races special event</li>
+                                <li><strong>Silver 1000:</strong> Templates for promoting the Silver 1000 championship event</li>
+                                <li><strong>Email Templates:</strong> Templates for email marketing campaigns</li>
+                                <li><strong>Website Content:</strong> Templates for website banners and content</li>
+                            </ul>
+                        </div>
+                    </section>
+                    
+                    <!-- Template Editor Section -->
+                    <section id="template-editor" class="mb-8">
+                        <h2 class="text-2xl font-bold mb-4 text-red-600 font-racing checkered-header">TEMPLATE EDITOR</h2>
+                        
+                        <div class="mb-6">
+                            <h3 class="text-xl font-bold mb-2 font-oswald">Editor Overview</h3>
+                            <p class="mb-4">The template editor is where you'll customize your selected template:</p>
+                            
+                            <ul class="list-disc pl-5 space-y-2">
+                                <li><strong>Canvas:</strong> The main editing area where you can see your design</li>
+                                <li><strong>Control Panel:</strong> The sidebar containing editing tools and options</li>
+                                <li><strong>Template Options:</strong> Customize backgrounds, layouts, and color themes</li>
+                                <li><strong>Text Controls:</strong> Edit text content, fonts, sizes, and styles</li>
+                                <li><strong>Image Controls:</strong> Upload and place images in your design</li>
+                                <li><strong>Export Options:</strong> Save your design in various formats</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="mb-6">
+                            <h3 class="text-xl font-bold mb-2 font-oswald">Working with the Canvas</h3>
+                            <p class="mb-4">Tips for working with the canvas:</p>
+                            
+                            <ul class="list-disc pl-5 space-y-2">
+                                <li><strong>Select Elements:</strong> Click on any element in the canvas to select it for editing</li>
+                                <li><strong>Move Elements:</strong> Click and drag selected elements to reposition them</li>
+                                <li><strong>Resize Elements:</strong> Use the corner handles to resize selected elements</li>
+                                <li><strong>Delete Elements:</strong> Select an element and press Delete or Backspace to remove it</li>
+                                <li><strong>Preview:</strong> Use the Preview button to see how your design will look when exported</li>
+                            </ul>
+                        </div>
+                    </section>
+                    
+                    <!-- Image Upload Section -->
+                    <section id="image-upload" class="mb-8">
+                        <h2 class="text-2xl font-bold mb-4 text-red-600 font-racing checkered-header">IMAGE UPLOAD</h2>
+                        
+                        <div class="mb-6">
+                            <h3 class="text-xl font-bold mb-2 font-oswald">Adding Images to Your Design</h3>
+                            <p class="mb-4">You can add your own images to customize your designs:</p>
+                            
+                            <ol class="list-decimal pl-5 space-y-2">
+                                <li><strong>Find the Image Section:</strong> In the editor control panel, locate the Images section</li>
+                                <li><strong>Upload Image:</strong> Click the upload button or area to select an image from your device</li>
+                                <li><strong>Select Image:</strong> Choose an image file (JPG, PNG, or GIF recommended)</li>
+                                <li><strong>Place Image:</strong> The image will be added to your canvas where you can position it</li>
+                                <li><strong>Adjust Image:</strong> Resize, rotate, or reposition the image as needed</li>
+                            </ol>
+                        </div>
+                        
+                        <div class="mb-6">
+                            <h3 class="text-xl font-bold mb-2 font-oswald">Image Tips</h3>
+                            <p class="mb-4">For best results with images:</p>
+                            
+                            <ul class="list-disc pl-5 space-y-2">
+                                <li><strong>Image Size:</strong> Use high-resolution images (1200x1200px or larger recommended)</li>
+                                <li><strong>File Format:</strong> PNG for graphics with transparency, JPG for photos</li>
+                                <li><strong>File Size:</strong> Keep files under 5MB for optimal performance</li>
+                                <li><strong>Aspect Ratio:</strong> Match the aspect ratio to the template when possible</li>
+                                <li><strong>Image Library:</strong> Previously uploaded images are saved in your session for reuse</li>
+                            </ul>
+                        </div>
+                    </section>
+                    
+                    <!-- Text Editing Section -->
+                    <section id="text-editing" class="mb-8">
+                        <h2 class="text-2xl font-bold mb-4 text-red-600 font-racing checkered-header">TEXT EDITING</h2>
+                        
+                        <div class="mb-6">
+                            <h3 class="text-xl font-bold mb-2 font-oswald">Editing Text Elements</h3>
+                            <p class="mb-4">To edit text in your design:</p>
+                            
+                            <ol class="list-decimal pl-5 space-y-2">
+                                <li><strong>Select Text:</strong> Click on any text element in the canvas to select it</li>
+                                <li><strong>Edit Content:</strong> Use the text input field in the control panel to change the text</li>
+                                <li><strong>Change Font:</strong> Select a different font from the Font Family dropdown</li>
+                                <li><strong>Adjust Size:</strong> Use the Font Size slider to make text larger or smaller</li>
+                                <li><strong>Apply Styles:</strong> Use the Bold, Italic, and Underline buttons to style your text</li>
+                                <li><strong>Change Color:</strong> Select a color from the color palette or use the color picker</li>
+                            </ol>
+                        </div>
+                        
+                        <div class="mb-6">
+                            <h3 class="text-xl font-bold mb-2 font-oswald">Text Presets</h3>
+                            <p class="mb-4">The tool includes text presets for common content:</p>
+                            
+                            <ul class="list-disc pl-5 space-y-2">
+                                <li><strong>Race Results:</strong> Date, class name, winner, and placement presets</li>
+                                <li><strong>Bus Races:</strong> Event date, title, tagline, and admission presets</li>
+                                <li><strong>Silver 1000:</strong> Championship-specific text presets</li>
+                                <li><strong>Add Preset:</strong> Click any preset button to add that text element to your design</li>
+                                <li><strong>Customize:</strong> After adding a preset, you can customize it like any other text element</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="mb-6">
+                            <h3 class="text-xl font-bold mb-2 font-oswald">Text Effects</h3>
+                            <p class="mb-4">Enhance your text with special effects:</p>
+                            
+                            <ul class="list-disc pl-5 space-y-2">
+                                <li><strong>Shadow:</strong> Add a drop shadow to make text stand out</li>
+                                <li><strong>Outline:</strong> Add an outline around text characters</li>
+                                <li><strong>Uppercase:</strong> Convert text to all uppercase letters</li>
+                                <li><strong>Alignment:</strong> Align text left, center, or right</li>
+                            </ul>
+                        </div>
+                    </section>
+                    
+                    <!-- Exporting Section -->
+                    <section id="exporting" class="mb-8">
+                        <h2 class="text-2xl font-bold mb-4 text-red-600 font-racing checkered-header">EXPORTING DESIGNS</h2>
+                        
+                        <div class="mb-6">
+                            <h3 class="text-xl font-bold mb-2 font-oswald">Export Options</h3>
+                            <p class="mb-4">When your design is ready, you can export it in several formats:</p>
+                            
+                            <ul class="list-disc pl-5 space-y-2">
+                                <li><strong>PNG:</strong> Best for social media posts with transparency support</li>
+                                <li><strong>JPG:</strong> Smaller file size, good for web use (no transparency)</li>
+                                <li><strong>PDF:</strong> Best for printing or professional distribution</li>
+                                <li><strong>SVG:</strong> Scalable vector format for professional editing</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="mb-6">
+                            <h3 class="text-xl font-bold mb-2 font-oswald">Export Process</h3>
+                            <p class="mb-4">To export your design:</p>
+                            
+                            <ol class="list-decimal pl-5 space-y-2">
+                                <li><strong>Click Export:</strong> Use the "Download Image" button below the canvas</li>
+                                <li><strong>Select Format:</strong> Choose your preferred file format</li>
+                                <li><strong>Set Options:</strong> Adjust quality settings (for JPG) or size options</li>
+                                <li><strong>Name File:</strong> Enter a filename for your exported design</li>
+                                <li><strong>Confirm Export:</strong> Click the Export button to download your file</li>
+                            </ol>
+                        </div>
+                        
+                        <div class="mb-6">
+                            <h3 class="text-xl font-bold mb-2 font-oswald">Additional Export Features</h3>
+                            <p class="mb-4">Other export options include:</p>
+                            
+                            <ul class="list-disc pl-5 space-y-2">
+                                <li><strong>Copy to Clipboard:</strong> Copy your design directly to clipboard for pasting</li>
+                                <li><strong>Save Template:</strong> Save your customized design as a template for future use</li>
+                                <li><strong>Size Options:</strong> Export at original size, 2x size, or reduced sizes</li>
+                                <li><strong>Quality Settings:</strong> Adjust JPG compression for optimal file size</li>
+                            </ul>
+                        </div>
+                    </section>
+                    
+                    <!-- Strategies Section -->
+                    <section id="strategies" class="mb-8">
+                        <h2 class="text-2xl font-bold mb-4 text-red-600 font-racing checkered-header">USING STRATEGIES</h2>
+                        
+                        <div class="mb-6">
+                            <h3 class="text-xl font-bold mb-2 font-oswald">Marketing Strategy Guide</h3>
+                            <p class="mb-4">The Strategies section provides marketing guidance for Halverson Speedway:</p>
+                            
+                            <ul class="list-disc pl-5 space-y-2">
+                                <li><strong>Social Media:</strong> Platform-specific strategies for Facebook, Instagram, and Twitter</li>
+                                <li><strong>Email Marketing:</strong> Campaign types, schedules, and best practices</li>
+                                <li><strong>Website Content:</strong> Content update schedules and recommendations</li>
+                                <li><strong>Event Promotion:</strong> Timeline and strategies for promoting special events</li>
+                                <li><strong>Seasonal Planning:</strong> Year-round marketing calendar and integrated approach</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="mb-6">
+                            <h3 class="text-xl font-bold mb-2 font-oswald">Applying Strategies</h3>
+                            <p class="mb-4">How to use the strategy guides with your templates:</p>
+                            
+                            <ol class="list-decimal pl-5 space-y-2">
+                                <li><strong>Review Strategy:</strong> Start by reading the relevant strategy section for your marketing need</li>
+                                <li><strong>Select Template:</strong> Choose a template that aligns with the recommended strategy</li>
+                                <li><strong>Customize Content:</strong> Adapt the template content based on strategy recommendations</li>
+                                <li><strong>Follow Schedule:</strong> Use the content calendars to plan your marketing activities</li>
+                                <li><strong>Measure Results:</strong> Track engagement and adjust your approach as needed</li>
+                            </ol>
+                        </div>
+                    </section>
+                    
+                    <!-- FAQ Section -->
+                    <section id="faq">
+                        <h2 class="text-2xl font-bold mb-4 text-red-600 font-racing checkered-header">FREQUENTLY ASKED QUESTIONS</h2>
+                        
+                        <div class="mb-6">
+                            <h3 class="text-xl font-bold mb-2 font-oswald">Common Questions</h3>
+                            
+                            <div class="space-y-4">
+                                <div>
+                                    <h4 class="font-bold">Is my data saved between sessions?</h4>
+                                    <p>Yes, your saved templates and recent uploads are stored in your browser's local storage. However, this data is specific to your browser and device.</p>
+                                </div>
+                                
+                                <div>
+                                    <h4 class="font-bold">Can I use these templates for other racetracks?</h4>
+                                    <p>These templates are specifically designed for Halverson Speedway branding. While you can customize them, they're intended for Halverson Speedway marketing use.</p>
+                                </div>
+                                
+                                <div>
+                                    <h4 class="font-bold">What if I need a custom template?</h4>
+                                    <p>You can modify existing templates to suit your needs. If you require a completely custom template, please contact the marketing department.</p>
+                                </div>
+                                
+                                <div>
+                                    <h4 class="font-bold">Can I access this tool on my phone?</h4>
+                                    <p>Yes, the tool works on mobile devices, but editing is easier on tablets or computers due to the larger screen size.</p>
+                                </div>
+                                
+                                <div>
+                                    <h4 class="font-bold">How do I report a bug or request a feature?</h4>
+                                    <p>Please contact the IT department with any issues or feature requests. Include details about your browser, device, and the specific problem you encountered.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-black text-white py-6 mt-8">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-4 md:mb-0">
+                    <p class="font-racing text-xl text-red-600">Halverson Speedway</p>
+                    <p class="text-sm">800 N. Boundary Ave, Duluth, MN 55810</p>
+                </div>
+                <div class="text-center mb-4 md:mb-0">
+                    <p class="text-sm">&copy; 2025 Halverson Speedway Marketing Tool</p>
+                </div>
+                <div class="flex space-x-4">
+                    <a href="#" class="text-white hover:text-yellow-400">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M22.675 0h-21.35c-.732 0-1.325.593-1.325 1.325v21.351c0 .731.593 1.324 1.325 1.324h11.495v-9.294h-3.128v-3.622h3.128v-2.671c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.795.143v3.24l-1.918.001c-1.504 0-1.795.715-1.795 1.763v2.313h3.587l-.467 3.622h-3.12v9.293h6.116c.73 0 1.323-.593 1.323-1.325v-21.35c0-.732-.593-1.325-1.325-1.325z"/>
+                        </svg>
+                    </a>
+                    <a href="#" class="text-white hover:text-yellow-400">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"/>
+                        </svg>
+                    </a>
+                    <a href="#" class="text-white hover:text-yellow-400">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

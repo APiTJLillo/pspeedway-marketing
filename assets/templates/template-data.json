@@ -1,0 +1,329 @@
+{
+  "templates": [
+    {
+      "id": "race_results_facebook",
+      "name": "Race Results - Facebook",
+      "category": "race_results",
+      "platform": "facebook",
+      "dimensions": {
+        "width": 1200,
+        "height": 1200
+      },
+      "description": "Square format optimized for Facebook posts with space for top 5 finishers.",
+      "elements": [
+        {
+          "type": "rectangle",
+          "id": "background",
+          "fill": "#000000",
+          "width": 1200,
+          "height": 1200,
+          "left": 600,
+          "top": 600,
+          "originX": "center",
+          "originY": "center",
+          "editable": false
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "text": "RACE RESULTS",
+          "left": 600,
+          "top": 150,
+          "fontSize": 72,
+          "fontFamily": "Racing Sans One",
+          "fill": "#D12026",
+          "originX": "center",
+          "originY": "center",
+          "editable": true
+        },
+        {
+          "type": "text",
+          "id": "date",
+          "text": "JUNE 15, 2025",
+          "left": 600,
+          "top": 230,
+          "fontSize": 36,
+          "fontFamily": "Oswald",
+          "fill": "#FFDD00",
+          "originX": "center",
+          "originY": "center",
+          "editable": true
+        },
+        {
+          "type": "text",
+          "id": "class_name",
+          "text": "WISSOTA LATE MODELS",
+          "left": 600,
+          "top": 300,
+          "fontSize": 42,
+          "fontFamily": "Oswald",
+          "fill": "#FFFFFF",
+          "originX": "center",
+          "originY": "center",
+          "editable": true
+        },
+        {
+          "type": "text",
+          "id": "first_place",
+          "text": "1ST PLACE: DRIVER NAME #00",
+          "left": 600,
+          "top": 400,
+          "fontSize": 36,
+          "fontFamily": "Oswald",
+          "fill": "#FFFFFF",
+          "originX": "center",
+          "originY": "center",
+          "editable": true
+        },
+        {
+          "type": "text",
+          "id": "second_place",
+          "text": "2ND PLACE: DRIVER NAME #00",
+          "left": 600,
+          "top": 460,
+          "fontSize": 30,
+          "fontFamily": "Oswald",
+          "fill": "#FFFFFF",
+          "originX": "center",
+          "originY": "center",
+          "editable": true
+        },
+        {
+          "type": "text",
+          "id": "third_place",
+          "text": "3RD PLACE: DRIVER NAME #00",
+          "left": 600,
+          "top": 520,
+          "fontSize": 30,
+          "fontFamily": "Oswald",
+          "fill": "#FFFFFF",
+          "originX": "center",
+          "originY": "center",
+          "editable": true
+        },
+        {
+          "type": "text",
+          "id": "footer",
+          "text": "HALVERSON SPEEDWAY",
+          "left": 600,
+          "top": 1100,
+          "fontSize": 48,
+          "fontFamily": "Racing Sans One",
+          "fill": "#D12026",
+          "originX": "center",
+          "originY": "center",
+          "editable": false
+        }
+      ]
+    },
+    {
+      "id": "race_results_instagram",
+      "name": "Race Results - Instagram",
+      "category": "race_results",
+      "platform": "instagram",
+      "dimensions": {
+        "width": 1080,
+        "height": 1080
+      },
+      "description": "Square format optimized for Instagram with winner spotlight.",
+      "elements": [
+        {
+          "type": "rectangle",
+          "id": "background",
+          "fill": "#000000",
+          "width": 1080,
+          "height": 1080,
+          "left": 540,
+          "top": 540,
+          "originX": "center",
+          "originY": "center",
+          "editable": false
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "text": "WINNER!",
+          "left": 540,
+          "top": 150,
+          "fontSize": 72,
+          "fontFamily": "Racing Sans One",
+          "fill": "#D12026",
+          "originX": "center",
+          "originY": "center",
+          "editable": true
+        },
+        {
+          "type": "text",
+          "id": "date",
+          "text": "JUNE 15, 2025",
+          "left": 540,
+          "top": 230,
+          "fontSize": 36,
+          "fontFamily": "Oswald",
+          "fill": "#FFDD00",
+          "originX": "center",
+          "originY": "center",
+          "editable": true
+        },
+        {
+          "type": "text",
+          "id": "class_name",
+          "text": "WISSOTA LATE MODELS",
+          "left": 540,
+          "top": 300,
+          "fontSize": 42,
+          "fontFamily": "Oswald",
+          "fill": "#FFFFFF",
+          "originX": "center",
+          "originY": "center",
+          "editable": true
+        },
+        {
+          "type": "text",
+          "id": "winner_name",
+          "text": "DRIVER NAME #00",
+          "left": 540,
+          "top": 400,
+          "fontSize": 54,
+          "fontFamily": "Oswald",
+          "fontWeight": "bold",
+          "fill": "#FFFFFF",
+          "originX": "center",
+          "originY": "center",
+          "editable": true
+        },
+        {
+          "type": "text",
+          "id": "footer",
+          "text": "HALVERSON SPEEDWAY",
+          "left": 540,
+          "top": 980,
+          "fontSize": 48,
+          "fontFamily": "Racing Sans One",
+          "fill": "#D12026",
+          "originX": "center",
+          "originY": "center",
+          "editable": false
+        }
+      ]
+    },
+    {
+      "id": "race_results_twitter",
+      "name": "Race Results - Twitter",
+      "category": "race_results",
+      "platform": "twitter",
+      "dimensions": {
+        "width": 1200,
+        "height": 675
+      },
+      "description": "Landscape format optimized for Twitter with concise results.",
+      "elements": [
+        {
+          "type": "rectangle",
+          "id": "background",
+          "fill": "#000000",
+          "width": 1200,
+          "height": 675,
+          "left": 600,
+          "top": 337.5,
+          "originX": "center",
+          "originY": "center",
+          "editable": false
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "text": "RACE RESULTS",
+          "left": 600,
+          "top": 100,
+          "fontSize": 60,
+          "fontFamily": "Racing Sans One",
+          "fill": "#D12026",
+          "originX": "center",
+          "originY": "center",
+          "editable": true
+        },
+        {
+          "type": "text",
+          "id": "date",
+          "text": "JUNE 15, 2025",
+          "left": 600,
+          "top": 160,
+          "fontSize": 30,
+          "fontFamily": "Oswald",
+          "fill": "#FFDD00",
+          "originX": "center",
+          "originY": "center",
+          "editable": true
+        },
+        {
+          "type": "text",
+          "id": "class_name",
+          "text": "WISSOTA LATE MODELS",
+          "left": 600,
+          "top": 210,
+          "fontSize": 36,
+          "fontFamily": "Oswald",
+          "fill": "#FFFFFF",
+          "originX": "center",
+          "originY": "center",
+          "editable": true
+        },
+        {
+          "type": "text",
+          "id": "results",
+          "text": "1. DRIVER NAME #00\n2. DRIVER NAME #00\n3. DRIVER NAME #00",
+          "left": 600,
+          "top": 350,
+          "fontSize": 36,
+          "fontFamily": "Oswald",
+          "fill": "#FFFFFF",
+          "originX": "center",
+          "originY": "center",
+          "textAlign": "center",
+          "editable": true
+        },
+        {
+          "type": "text",
+          "id": "footer",
+          "text": "HALVERSON SPEEDWAY",
+          "left": 600,
+          "top": 600,
+          "fontSize": 42,
+          "fontFamily": "Racing Sans One",
+          "fill": "#D12026",
+          "originX": "center",
+          "originY": "center",
+          "editable": false
+        }
+      ]
+    }
+  ],
+  "categories": [
+    {
+      "id": "race_results",
+      "name": "Race Results",
+      "description": "Templates for sharing race outcomes on various platforms"
+    },
+    {
+      "id": "bus_races",
+      "name": "Bus Races",
+      "description": "Templates for promoting the Bus Races special event"
+    },
+    {
+      "id": "silver_1000",
+      "name": "Silver 1000",
+      "description": "Templates for promoting the Silver 1000 championship event"
+    },
+    {
+      "id": "email",
+      "name": "Email Templates",
+      "description": "Templates for email marketing campaigns"
+    },
+    {
+      "id": "website",
+      "name": "Website Content",
+      "description": "Templates for website banners and content"
+    }
+  ]
+}

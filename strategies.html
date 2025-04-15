@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Strategy Browser - Halverson Speedway Marketing Tool</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Racing+Sans+One&family=Oswald:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body class="bg-gray-100">
+    <header class="bg-black text-white">
+        <div class="container mx-auto px-4 py-2">
+            <div class="flex justify-between items-center">
+                <div class="flex items-center">
+                    <div class="text-2xl font-bold text-red-600 font-racing">
+                        Halverson Speedway Marketing Tool
+                    </div>
+                </div>
+                <nav class="hidden md:block">
+                    <ul class="flex space-x-4">
+                        <li><a href="index.html" class="text-white hover:text-yellow-400">Templates</a></li>
+                        <li><a href="strategies.html" class="text-yellow-400 hover:text-white">Strategies</a></li>
+                        <li><a href="#" class="text-white hover:text-yellow-400">Help</a></li>
+                    </ul>
+                </nav>
+                <div class="md:hidden">
+                    <button id="mobile-menu-button" class="text-white">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden bg-gray-900">
+            <ul class="px-4 py-2">
+                <li><a href="index.html" class="block py-2 text-white">Templates</a></li>
+                <li><a href="strategies.html" class="block py-2 text-yellow-400">Strategies</a></li>
+                <li><a href="#" class="block py-2 text-white">Help</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <main class="container mx-auto px-4 py-8">
+        <div class="bg-white rounded-lg shadow p-4 mb-6">
+            <h1 class="text-2xl font-bold mb-2 text-red-600 font-racing">Marketing Strategies</h1>
+            <p class="text-gray-600 mb-4">Browse our recommended marketing strategies for Halverson Speedway events.</p>
+        </div>
+
+        <div class="flex flex-col md:flex-row">
+            <!-- Sidebar -->
+            <div class="w-full md:w-1/4 mb-6 md:mb-0 md:pr-4">
+                <div class="bg-white rounded-lg shadow p-4 category-sidebar">
+                    <h2 class="text-xl font-bold mb-4 text-red-600 font-oswald">STRATEGY CATEGORIES</h2>
+                    <ul class="space-y-2">
+                        <li><a href="#social-media" class="category-link block p-2 bg-red-600 text-white rounded font-oswald">Social Media</a></li>
+                        <li><a href="#email-marketing" class="category-link block p-2 hover:bg-gray-100 rounded font-oswald">Email Marketing</a></li>
+                        <li><a href="#website-content" class="category-link block p-2 hover:bg-gray-100 rounded font-oswald">Website Content</a></li>
+                        <li><a href="#event-promotion" class="category-link block p-2 hover:bg-gray-100 rounded font-oswald">Event Promotion</a></li>
+                        <li><a href="#seasonal-planning" class="category-link block p-2 hover:bg-gray-100 rounded font-oswald">Seasonal Planning</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Main Content -->
+            <div class="w-full md:w-3/4">
+                <div class="bg-white rounded-lg shadow p-4">
+                    <!-- Social Media Section -->
+                    <section id="social-media" class="mb-8">
+                        <h2 class="text-2xl font-bold mb-4 text-red-600 font-racing checkered-header">SOCIAL MEDIA STRATEGY</h2>
+                        
+                        <div class="mb-6">
+                            <h3 class="text-xl font-bold mb-2 font-oswald">Platform Recommendations</h3>
+                            <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                                <div class="border rounded-lg p-4">
+                                    <h4 class="font-bold mb-2">Facebook</h4>
+                                    <p class="text-sm mb-2">Primary platform for event announcements and community engagement.</p>
+                                    <ul class="text-sm list-disc pl-5">
+                                        <li>Post 3-4 times per week</li>
+                                        <li>Share race results within 2 hours</li>
+                                        <li>Create event pages for special races</li>
+                                        <li>Engage with fan comments daily</li>
+                                    </ul>
+                                </div>
+                                <div class="border rounded-lg p-4">
+                                    <h4 class="font-bold mb-2">Instagram</h4>
+                                    <p class="text-sm mb-2">Visual platform for race day photos and driver spotlights.</p>
+                                    <ul class="text-sm list-disc pl-5">
+                                        <li>Post 2-3 times per week</li>
+                                        <li>Share action shots and winner photos</li>
+                                        <li>Use Stories for behind-the-scenes</li>
+                                        <li>Utilize racing and local hashtags</li>
+                                    </ul>
+                                </div>
+                                <div class="border rounded-lg p-4">
+                                    <h4 class="font-bold mb-2">Twitter</h4>
+                                    <p class="text-sm mb-2">Real-time platform for race updates and results.</p>
+                                    <ul class="text-sm list-disc pl-5">
+                                        <li>Live tweet during races</li>
+                                        <li>Share quick results immediately</li>
+                                        <li>Engage with racing community</li>
+                                        <li>Promote special events with countdown</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="mb-6">
+                            <h3 class="text-xl font-bold mb-2 font-oswald">Content Calendar</h3>
+                            <div class="overflow-x-auto">
+                                <table class="min-w-full bg-white border">
+                                    <thead>
+                                        <tr>
+                                            <th class="py-2 px-4 border-b">Day</th>
+                                            <th class="py-2 px-4 border-b">Content Type</th>
+                                            <th class="py-2 px-4 border-b">Platform</th>
+                                            <th class="py-2 px-4 border-b">Template</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td class="py-2 px-4 border-b">Monday</td>
+                                            <td class="py-2 px-4 border-b">Weekend Recap</td>
+                                            <td class="py-2 px-4 border-b">Facebook, Instagram</td>
+                                            <td class="py-2 px-4 border-b">Race Results</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="py-2 px-4 border-b">Wednesday</td>
+                                            <td class="py-2 px-4 border-b">Driver Spotlight</td>
+                                            <td class="py-2 px-4 border-b">Instagram</td>
+                                            <td class="py-2 px-4 border-b">Driver Profile</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="py-2 px-4 border-b">Thursday</td>
+                                            <td class="py-2 px-4 border-b">Weekend Preview</td>
+                                            <td class="py-2 px-4 border-b">All Platforms</td>
+                                            <td class="py-2 px-4 border-b">Event Announcement</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="py-2 px-4 border-b">Friday</td>
+                                            <td class="py-2 px-4 border-b">Final Reminder</td>
+                                            <td class="py-2 px-4 border-b">Facebook, Twitter</td>
+                                            <td class="py-2 px-4 border-b">Event Countdown</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="py-2 px-4 border-b">Saturday</td>
+                                            <td class="py-2 px-4 border-b">Live Updates</td>
+                                            <td class="py-2 px-4 border-b">Twitter, Facebook</td>
+                                            <td class="py-2 px-4 border-b">Race Day Updates</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        
+                        <div class="mb-6">
+                            <h3 class="text-xl font-bold mb-2 font-oswald">Best Practices</h3>
+                            <ul class="list-disc pl-5 space-y-2">
+                                <li>Maintain consistent branding across all platforms</li>
+                                <li>Respond to comments and messages within 24 hours</li>
+                                <li>Tag sponsors and drivers in relevant posts</li>
+                                <li>Use high-quality images that capture racing excitement</li>
+                                <li>Create platform-specific content rather than cross-posting identical content</li>
+                                <li>Analyze engagement metrics monthly and adjust strategy accordingly</li>
+                            </ul>
+                        </div>
+                    </section>
+                    
+                    <!-- Email Marketing Section -->
+                    <section id="email-marketing" class="mb-8">
+                        <h2 class="text-2xl font-bold mb-4 text-red-600 font-racing checkered-header">EMAIL MARKETING STRATEGY</h2>
+                        
+                        <div class="mb-6">
+                            <h3 class="text-xl font-bold mb-2 font-oswald">Campaign Types</h3>
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                <div class="border rounded-lg p-4">
+                                    <h4 class="font-bold mb-2">Weekly Race Announcements</h4>
+                                    <p class="text-sm mb-2">Send every Thursday to promote upcoming weekend races.</p>
+                                    <ul class="text-sm list-disc pl-5">
+                                        <li>Featured race classes</li>
+                                        <li>Special events or promotions</li>
+                                        <li>Weather forecast</li>
+                                        <li>Ticket information</li>
+                                    </ul>
+                                </div>
+                                <div class="border rounded-lg p-4">
+                                    <h4 class="font-bold mb-2">Race Results Recap</h4>
+                                    <p class="text-sm mb-2">Send every Monday to summarize weekend results.</p>
+                                    <ul class="text-sm list-disc pl-5">
+                                        <li>Top 3 finishers in each class</li>
+                                        <li>Highlight exciting moments</li>
+                                        <li>Driver quotes</li>
+                                        <li>Photo gallery link</li>
+                                    </ul>
+                                </div>
+                                <div class="border rounded-lg p-4">
+                                    <h4 class="font-bold mb-2">Special Event Promotions</h4>
+                                    <p class="text-sm mb-2">Send 2 weeks, 1 week, and 3 days before special events.</p>
+                                    <ul class="text-sm list-disc pl-5">
+                                        <li>Event details and schedule</li>
+                                        <li>Special attractions</li>
+                                        <li>Early bird ticket offers</li>
+                                        <li>VIP package information</li>
+                                    </ul>
+                                </div>
+                                <div class="border rounded-lg p-4">
+                                    <h4 class="font-bold mb-2">Sponsor Highlights</h4>
+                                    <p class="text-sm mb-2">Send monthly to showcase sponsors.</p>
+                                    <ul class="text-sm list-disc pl-5">
+                                        <li>Featured sponsor spotlight</li>
+                                        <li>Sponsor special offers</li>
+                                        <li>Sponsor events or news</li>
+                                        <li>Thank you message</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="mb-6">
+                            <h3 class="text-xl font-bold mb-2 font-oswald">Email Best Practices</h3>
+                            <ul class="list-disc pl-5 space-y-2">
+                                <li>Use mobile-responsive email templates</li>
+                                <li>Keep subject lines under 50 characters</li>
+                                <li>Include clear call-to-action buttons</li>
+                                <li>Segment your audience based on interests (e.g., race classes)</li>
+                                <li>Maintain consistent sending schedule</li>
+                                <li>Include social media links in every email</li>
+                                <li>Test different sending times to optimize open rates</li>
+                            </ul>
+                        </div>
+                    </section>
+                    
+                    <!-- Website Content Section -->
+                    <section id="website-content" class="mb-8">
+                        <h2 class="text-2xl font-bold mb-4 text-red-600 font-racing checkered-header">WEBSITE CONTENT STRATEGY</h2>
+                        
+                        <div class="mb-6">
+                            <h3 class="text-xl font-bold mb-2 font-oswald">Content Update Schedule</h3>
+                            <div class="overflow-x-auto">
+                                <table class="min-w-full bg-white border">
+                                    <thead>
+                                        <tr>
+                                            <th class="py-2 px-4 border-b">Page</th>
+                                            <th class="py-2 px-4 border-b">Update Frequency</th>
+                                            <th class="py-2 px-4 border-b">Content Type</th>
+                                            <th class="py-2 px-4 border-b">Template</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td class="py-2 px-4 border-b">Homepage</td>
+                                            <td class="py-2 px-4 border-b">Weekly (Thursday)</td>
+                                            <td class="py-2 px-4 border-b">Featured Event Banner</td>
+                                            <td class="py-2 px-4 border-b">Homepage Banner</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="py-2 px-4 border-b">Events Page</td>
+                                            <td class="py-2 px-4 border-b">Monthly</td>
+                                            <td class="py-2 px-4 border-b">Upcoming Schedule</td>
+                                            <td class="py-2 px-4 border-b">Event Calendar</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="py-2 px-4 border-b">Results Page</td>
+                                            <td class="py-2 px-4 border-b">Weekly (Sunday)</td>
+                                            <td class="py-2 px-4 border-b">Race Results</td>
+                                            <td class="py-2 px-4 border-b">Results Table</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="py-2 px-4 border-b">News Section</td>
+                                            <td class="py-2 px-4 border-b">Bi-weekly</td>
+                                            <td class="py-2 px-4 border-b">Track News</td>
+                                            <td class="py-2 px-4 border-b">News Article</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="py-2 px-4 border-b">Special Events</td>
+                                            <td class="py-2 px-4 border-b">As needed</td>
+                                            <td class="py-2 px-4 border-b">Event Details</td>
+                                            <td class="py-2 px-4 border-b">Event Page</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        
+                        <div class="mb-6">
+                            <h3 class="text-xl font-bold mb-2 font-oswald">Website Best Practices</h3>
+                            <ul class="list-disc pl-5 space-y-2">
+                                <li>Ensure all content is mobile-responsive</li>
+                                <li>Keep homepage updated with current events and news</li>
+                                <li>Maintain consistent branding throughout the site</li>
+                                <li>Include clear calls-to-action for ticket purchases</li>
+                                <li>Optimize images for fast loading</li>
+                                <li>Include social media feeds on relevant pages</li>
+                                <li>Ensure race schedules and results are easy to find</li>
+                                <li>Feature sponsor logos prominently</li>
+                            </ul>
+                        </div>
+                    </section>
+                    
+                    <!-- Event Promotion Section -->
+                    <section id="event-promotion" class="mb-8">
+                        <h2 class="text-2xl font-bold mb-4 text-red-600 font-racing checkered-header">EVENT PROMOTION STRATEGY</h2>
+                        
+                        <div class="mb-6">
+                            <h3 class="text-xl font-bold mb-2 font-oswald">Promotion Timeline</h3>
+                            <div class="relative overflow-hidden">
+                                <div class="border rounded-lg p-4 mb-4">
+                                    <h4 class="font-bold mb-2">4 Weeks Before Event</h4>
+                                    <ul class="text-sm list-disc pl-5">
+                                        <li>Initial announcement on website and social media</li>
+                                        <li>Create Facebook event page</li>
+                                        <li>Send "Save the Date" email to subscriber list</li>
+                                        <li>Begin sponsor coordination</li>
+                                    </ul>
+                                </div>
+                                <div class="border rounded-lg p-4 mb-4">
+                                    <h4 class="font-bold mb-2">2 Weeks Before Event</h4>
+                                    <ul class="text-sm list-disc pl-5">
+                                        <li>Detailed event email with schedule and highlights</li>
+                                        <li>Increase social media posting frequency</li>
+                                        <li>Share driver spotlights and event previews</li>
+                                        <li>Launch any early bird ticket specials</li>
+                                    </ul>
+                                </div>
+                                <div class="border rounded-lg p-4 mb-4">
+                                    <h4 class="font-bold mb-2">1 Week Before Event</h4>
+                                    <ul class="text-sm list-disc pl-5">
+                                        <li>Daily countdown posts on social media</li>
+                                        <li>Final promotional email with last-minute details</li>
+                                        <li>Share "behind the scenes" preparation content</li>
+                                        <li>Coordinate with local media for coverage</li>
+                                    </ul>
+                                </div>
+                                <div class="border rounded-lg p-4">
+                                    <h4 class="font-bold mb-2">Event Day</h4>
+                                    <ul class="text-sm list-disc pl-5">
+                                        <li>Morning reminder posts on all platforms</li>
+                                        <li>Live updates throughout the event</li>
+                                        <li>Encourage attendee social sharing with hashtags</li>
+                                        <li>Capture content for post-event recap</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="mb-6">
+                            <h3 class="text-xl font-bold mb-2 font-oswald">Special Event Focus</h3>
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                <div class="border rounded-lg p-4">
+                                    <h4 class="font-bold mb-2">Bus Races</h4>
+                                    <p class="text-sm mb-2">Promotional strategy for this unique event.</p>
+                                    <ul class="text-sm list-disc pl-5">
+                                        <li>Emphasize family-friendly entertainment</li>
+                                        <li>Share videos from previous bus races</li>
+                                        <li>Create "meet the bus drivers" content</li>
+                                        <li>Promote special ticket packages</li>
+                                        <li>Partner with local schools or businesses</li>
+                                    </ul>
+                                </div>
+                                <div class="border rounded-lg p-4">
+                                    <h4 class="font-bold mb-2">Silver 1000</h4>
+                                    <p class="text-sm mb-2">Promotional strategy for championship event.</p>
+                                    <ul class="text-sm list-disc pl-5">
+                                        <li>Highlight prestigious nature of the event</li>
+                                        <li>Feature past champions and history</li>
+                                        <li>Emphasize prize money and significance</li>
+                                        <li>Create driver profiles for top contenders</li>
+                                        <li>Develop VIP experience packages</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    
+                    <!-- Seasonal Planning Section -->
+                    <section id="seasonal-planning">
+                        <h2 class="text-2xl font-bold mb-4 text-red-600 font-racing checkered-header">SEASONAL PLANNING STRATEGY</h2>
+                        
+                        <div class="mb-6">
+                            <h3 class="text-xl font-bold mb-2 font-oswald">Annual Marketing Calendar</h3>
+                            <div class="overflow-x-auto">
+                                <table class="min-w-full bg-white border">
+                                    <thead>
+                                        <tr>
+                                            <th class="py-2 px-4 border-b">Season Phase</th>
+                                            <th class="py-2 px-4 border-b">Timeframe</th>
+                                            <th class="py-2 px-4 border-b">Marketing Focus</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td class="py-2 px-4 border-b">Off-Season</td>
+                                            <td class="py-2 px-4 border-b">November-February</td>
+                                            <td class="py-2 px-4 border-b">
+                                                <ul class="list-disc pl-5">
+                                                    <li>Season recap content</li>
+                                                    <li>Driver and team announcements</li>
+                                                    <li>Season ticket sales</li>
+                                                    <li>Sponsor appreciation</li>
+                                                </ul>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="py-2 px-4 border-b">Pre-Season</td>
+                                            <td class="py-2 px-4 border-b">March-April</td>
+                                            <td class="py-2 px-4 border-b">
+                                                <ul class="list-disc pl-5">
+                                                    <li>Season schedule announcement</li>
+                                                    <li>Track improvements</li>
+                                                    <li>Driver profiles</li>
+                                                    <li>Early bird ticket promotions</li>
+                                                </ul>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="py-2 px-4 border-b">Early Season</td>
+                                            <td class="py-2 px-4 border-b">May-June</td>
+                                            <td class="py-2 px-4 border-b">
+                                                <ul class="list-disc pl-5">
+                                                    <li>Opening weekend promotion</li>
+                                                    <li>Weekly race promotion</li>
+                                                    <li>New fan education content</li>
+                                                    <li>Bus Races special event</li>
+                                                </ul>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="py-2 px-4 border-b">Mid-Season</td>
+                                            <td class="py-2 px-4 border-b">July-August</td>
+                                            <td class="py-2 px-4 border-b">
+                                                <ul class="list-disc pl-5">
+                                                    <li>Championship standings updates</li>
+                                                    <li>Mid-season special events</li>
+                                                    <li>Family night promotions</li>
+                                                    <li>Group ticket packages</li>
+                                                </ul>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="py-2 px-4 border-b">Championship Season</td>
+                                            <td class="py-2 px-4 border-b">September-October</td>
+                                            <td class="py-2 px-4 border-b">
+                                                <ul class="list-disc pl-5">
+                                                    <li>Championship race scenarios</li>
+                                                    <li>Silver 1000 major promotion</li>
+                                                    <li>Season finale events</li>
+                                                    <li>Championship contender profiles</li>
+                                                </ul>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        
+                        <div class="mb-6">
+                            <h3 class="text-xl font-bold mb-2 font-oswald">Integrated Marketing Approach</h3>
+                            <p class="mb-4">For maximum effectiveness, coordinate marketing efforts across all channels:</p>
+                            <ul class="list-disc pl-5 space-y-2">
+                                <li>Maintain consistent messaging and branding across all platforms</li>
+                                <li>Coordinate email, social media, and website updates to reinforce key messages</li>
+                                <li>Create content that can be repurposed across multiple channels</li>
+                                <li>Develop a central content calendar that all team members can access</li>
+                                <li>Measure performance across all channels to identify most effective strategies</li>
+                                <li>Adjust marketing mix based on seasonal needs and event importance</li>
+                            </ul>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-black text-white py-6 mt-8">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-4 md:mb-0">
+                    <p class="font-racing text-xl text-red-600">Halverson Speedway</p>
+                    <p class="text-sm">800 N. Boundary Ave, Duluth, MN 55810</p>
+                </div>
+                <div class="text-center mb-4 md:mb-0">
+                    <p class="text-sm">&copy; 2025 Halverson Speedway Marketing Tool</p>
+                </div>
+                <div class="flex space-x-4">
+                    <a href="#" class="text-white hover:text-yellow-400">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M22.675 0h-21.35c-.732 0-1.325.593-1.325 1.325v21.351c0 .731.593 1.324 1.325 1.324h11.495v-9.294h-3.128v-3.622h3.128v-2.671c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.795.143v3.24l-1.918.001c-1.504 0-1.795.715-1.795 1.763v2.313h3.587l-.467 3.622h-3.12v9.293h6.116c.73 0 1.323-.593 1.323-1.325v-21.35c0-.732-.593-1.325-1.325-1.325z"/>
+                        </svg>
+                    </a>
+                    <a href="#" class="text-white hover:text-yellow-400">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"/>
+                        </svg>
+                    </a>
+                    <a href="#" class="text-white hover:text-yellow-400">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

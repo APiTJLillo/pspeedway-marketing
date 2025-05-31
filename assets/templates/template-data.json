@@ -1,329 +1,718 @@
 {
-  "templates": [
+  "backgrounds": [
     {
-      "id": "race_results_facebook",
-      "name": "Race Results - Facebook",
-      "category": "race_results",
-      "platform": "facebook",
-      "dimensions": {
-        "width": 1200,
-        "height": 1200
-      },
-      "description": "Square format optimized for Facebook posts with space for top 5 finishers.",
-      "elements": [
-        {
-          "type": "rectangle",
-          "id": "background",
-          "fill": "#000000",
-          "width": 1200,
-          "height": 1200,
-          "left": 600,
-          "top": 600,
-          "originX": "center",
-          "originY": "center",
-          "editable": false
-        },
-        {
-          "type": "text",
-          "id": "title",
-          "text": "RACE RESULTS",
-          "left": 600,
-          "top": 150,
-          "fontSize": 72,
-          "fontFamily": "Racing Sans One",
-          "fill": "#D12026",
-          "originX": "center",
-          "originY": "center",
-          "editable": true
-        },
-        {
-          "type": "text",
-          "id": "date",
-          "text": "JUNE 15, 2025",
-          "left": 600,
-          "top": 230,
-          "fontSize": 36,
-          "fontFamily": "Oswald",
-          "fill": "#FFDD00",
-          "originX": "center",
-          "originY": "center",
-          "editable": true
-        },
-        {
-          "type": "text",
-          "id": "class_name",
-          "text": "WISSOTA LATE MODELS",
-          "left": 600,
-          "top": 300,
-          "fontSize": 42,
-          "fontFamily": "Oswald",
-          "fill": "#FFFFFF",
-          "originX": "center",
-          "originY": "center",
-          "editable": true
-        },
-        {
-          "type": "text",
-          "id": "first_place",
-          "text": "1ST PLACE: DRIVER NAME #00",
-          "left": 600,
-          "top": 400,
-          "fontSize": 36,
-          "fontFamily": "Oswald",
-          "fill": "#FFFFFF",
-          "originX": "center",
-          "originY": "center",
-          "editable": true
-        },
-        {
-          "type": "text",
-          "id": "second_place",
-          "text": "2ND PLACE: DRIVER NAME #00",
-          "left": 600,
-          "top": 460,
-          "fontSize": 30,
-          "fontFamily": "Oswald",
-          "fill": "#FFFFFF",
-          "originX": "center",
-          "originY": "center",
-          "editable": true
-        },
-        {
-          "type": "text",
-          "id": "third_place",
-          "text": "3RD PLACE: DRIVER NAME #00",
-          "left": 600,
-          "top": 520,
-          "fontSize": 30,
-          "fontFamily": "Oswald",
-          "fill": "#FFFFFF",
-          "originX": "center",
-          "originY": "center",
-          "editable": true
-        },
-        {
-          "type": "text",
-          "id": "footer",
-          "text": "HALVERSON SPEEDWAY",
-          "left": 600,
-          "top": 1100,
-          "fontSize": 48,
-          "fontFamily": "Racing Sans One",
-          "fill": "#D12026",
-          "originX": "center",
-          "originY": "center",
-          "editable": false
-        }
-      ]
+      "id": "aerial_track_dark",
+      "name": "Aerial Track - Dark",
+      "type": "image",
+      "url": "/assets/images/backgrounds/aerial_track_dark.jpg",
+      "category": "aerial"
     },
     {
-      "id": "race_results_instagram",
-      "name": "Race Results - Instagram",
-      "category": "race_results",
-      "platform": "instagram",
-      "dimensions": {
-        "width": 1080,
-        "height": 1080
-      },
-      "description": "Square format optimized for Instagram with winner spotlight.",
-      "elements": [
-        {
-          "type": "rectangle",
-          "id": "background",
-          "fill": "#000000",
-          "width": 1080,
-          "height": 1080,
-          "left": 540,
-          "top": 540,
-          "originX": "center",
-          "originY": "center",
-          "editable": false
-        },
-        {
-          "type": "text",
-          "id": "title",
-          "text": "WINNER!",
-          "left": 540,
-          "top": 150,
-          "fontSize": 72,
-          "fontFamily": "Racing Sans One",
-          "fill": "#D12026",
-          "originX": "center",
-          "originY": "center",
-          "editable": true
-        },
-        {
-          "type": "text",
-          "id": "date",
-          "text": "JUNE 15, 2025",
-          "left": 540,
-          "top": 230,
-          "fontSize": 36,
-          "fontFamily": "Oswald",
-          "fill": "#FFDD00",
-          "originX": "center",
-          "originY": "center",
-          "editable": true
-        },
-        {
-          "type": "text",
-          "id": "class_name",
-          "text": "WISSOTA LATE MODELS",
-          "left": 540,
-          "top": 300,
-          "fontSize": 42,
-          "fontFamily": "Oswald",
-          "fill": "#FFFFFF",
-          "originX": "center",
-          "originY": "center",
-          "editable": true
-        },
-        {
-          "type": "text",
-          "id": "winner_name",
-          "text": "DRIVER NAME #00",
-          "left": 540,
-          "top": 400,
-          "fontSize": 54,
-          "fontFamily": "Oswald",
-          "fontWeight": "bold",
-          "fill": "#FFFFFF",
-          "originX": "center",
-          "originY": "center",
-          "editable": true
-        },
-        {
-          "type": "text",
-          "id": "footer",
-          "text": "HALVERSON SPEEDWAY",
-          "left": 540,
-          "top": 980,
-          "fontSize": 48,
-          "fontFamily": "Racing Sans One",
-          "fill": "#D12026",
-          "originX": "center",
-          "originY": "center",
-          "editable": false
-        }
-      ]
+      "id": "aerial_track_dusk",
+      "name": "Aerial Track - Dusk",
+      "type": "image",
+      "url": "/assets/images/backgrounds/aerial_track_dusk.jpg",
+      "category": "aerial"
     },
     {
-      "id": "race_results_twitter",
-      "name": "Race Results - Twitter",
-      "category": "race_results",
-      "platform": "twitter",
-      "dimensions": {
-        "width": 1200,
-        "height": 675
-      },
-      "description": "Landscape format optimized for Twitter with concise results.",
-      "elements": [
-        {
-          "type": "rectangle",
-          "id": "background",
-          "fill": "#000000",
-          "width": 1200,
-          "height": 675,
-          "left": 600,
-          "top": 337.5,
-          "originX": "center",
-          "originY": "center",
-          "editable": false
-        },
-        {
-          "type": "text",
-          "id": "title",
-          "text": "RACE RESULTS",
-          "left": 600,
-          "top": 100,
-          "fontSize": 60,
-          "fontFamily": "Racing Sans One",
-          "fill": "#D12026",
-          "originX": "center",
-          "originY": "center",
-          "editable": true
-        },
-        {
-          "type": "text",
-          "id": "date",
-          "text": "JUNE 15, 2025",
-          "left": 600,
-          "top": 160,
-          "fontSize": 30,
-          "fontFamily": "Oswald",
-          "fill": "#FFDD00",
-          "originX": "center",
-          "originY": "center",
-          "editable": true
-        },
-        {
-          "type": "text",
-          "id": "class_name",
-          "text": "WISSOTA LATE MODELS",
-          "left": 600,
-          "top": 210,
-          "fontSize": 36,
-          "fontFamily": "Oswald",
-          "fill": "#FFFFFF",
-          "originX": "center",
-          "originY": "center",
-          "editable": true
-        },
-        {
-          "type": "text",
-          "id": "results",
-          "text": "1. DRIVER NAME #00\n2. DRIVER NAME #00\n3. DRIVER NAME #00",
-          "left": 600,
-          "top": 350,
-          "fontSize": 36,
-          "fontFamily": "Oswald",
-          "fill": "#FFFFFF",
-          "originX": "center",
-          "originY": "center",
-          "textAlign": "center",
-          "editable": true
-        },
-        {
-          "type": "text",
-          "id": "footer",
-          "text": "HALVERSON SPEEDWAY",
-          "left": 600,
-          "top": 600,
-          "fontSize": 42,
-          "fontFamily": "Racing Sans One",
-          "fill": "#D12026",
-          "originX": "center",
-          "originY": "center",
-          "editable": false
-        }
-      ]
+      "id": "checkered_flag_dark",
+      "name": "Checkered Flag - Dark",
+      "type": "image",
+      "url": "/assets/images/backgrounds/checkered_flag_dark.jpg",
+      "category": "texture"
+    },
+    {
+      "id": "texture_dark_metal",
+      "name": "Dark Metal Texture",
+      "type": "image",
+      "url": "/assets/images/backgrounds/texture_dark_metal.jpeg",
+      "category": "texture"
+    },
+    {
+      "id": "texture_checkered_flag",
+      "name": "Checkered Flag Texture",
+      "type": "image",
+      "url": "/assets/images/backgrounds/texture_checkered_flag.webp",
+      "category": "texture"
     }
   ],
   "categories": [
     {
       "id": "race_results",
       "name": "Race Results",
-      "description": "Templates for sharing race outcomes on various platforms"
+      "description": "Templates for sharing race results on social media and website",
+      "templates": [
+        {
+          "id": "race_results_facebook",
+          "name": "Race Results - Facebook (Standard)",
+          "description": "Standard template for posting race results on Facebook",
+          "platform": "Facebook",
+          "width": 1200,
+          "height": 630,
+          "thumbnail": "/assets/images/templates/race_results_facebook.jpg",
+          "elements": [
+            {
+              "type": "background",
+              "color": "#000000"
+            },
+            {
+              "type": "shape",
+              "shape": "rect",
+              "left": 0,
+              "top": 0,
+              "width": 1200,
+              "height": 100,
+              "fill": "#D12026",
+              "id": "header_bg"
+            },
+            {
+              "type": "text",
+              "text": "RACE RESULTS",
+              "left": 600,
+              "top": 50,
+              "fontFamily": "Racing Sans One",
+              "fontSize": 60,
+              "fill": "#FFFFFF",
+              "textAlign": "center",
+              "id": "header_text"
+            },
+            {
+              "type": "text",
+              "text": "April 15, 2025",
+              "left": 600,
+              "top": 130,
+              "fontFamily": "Oswald",
+              "fontSize": 36,
+              "fill": "#FFFFFF",
+              "textAlign": "center",
+              "id": "date_text"
+            },
+            {
+              "type": "shape",
+              "shape": "rect",
+              "left": 150,
+              "top": 200,
+              "width": 900,
+              "height": 300,
+              "fill": "#FFFFFF",
+              "opacity": 0.9,
+              "rx": 10,
+              "ry": 10,
+              "id": "results_bg"
+            },
+            {
+              "type": "text",
+              "text": "LATE MODEL DIVISION",
+              "left": 600,
+              "top": 230,
+              "fontFamily": "Racing Sans One",
+              "fontSize": 40,
+              "fill": "#D12026",
+              "textAlign": "center",
+              "id": "division_text"
+            },
+            {
+              "type": "text",
+              "text": "1st Place: John Smith #42",
+              "left": 600,
+              "top": 300,
+              "fontFamily": "Oswald",
+              "fontSize": 32,
+              "fill": "#000000",
+              "textAlign": "center",
+              "id": "first_place"
+            },
+            {
+              "type": "text",
+              "text": "2nd Place: Mike Johnson #17",
+              "left": 600,
+              "top": 350,
+              "fontFamily": "Oswald",
+              "fontSize": 32,
+              "fill": "#000000",
+              "textAlign": "center",
+              "id": "second_place"
+            },
+            {
+              "type": "text",
+              "text": "3rd Place: Sarah Williams #88",
+              "left": 600,
+              "top": 400,
+              "fontFamily": "Oswald",
+              "fontSize": 32,
+              "fill": "#000000",
+              "textAlign": "center",
+              "id": "third_place"
+            },
+            {
+              "type": "shape",
+              "shape": "rect",
+              "left": 0,
+              "top": 530,
+              "width": 1200,
+              "height": 100,
+              "fill": "#D12026",
+              "id": "footer_bg"
+            },
+            {
+              "type": "text",
+              "text": "HALVOR LINES SPEEDWAY",
+              "left": 600,
+              "top": 580,
+              "fontFamily": "Racing Sans One",
+              "fontSize": 48,
+              "fill": "#FFFFFF",
+              "textAlign": "center",
+              "id": "footer_text"
+            }
+          ]
+        },
+        {
+          "id": "race_results_proctor_facebook",
+          "name": "Race Results - Facebook (Proctor Style)",
+          "description": "Proctor-style template for race results on Facebook",
+          "platform": "Facebook",
+          "width": 1200,
+          "height": 630,
+          "thumbnail": "/assets/images/templates/race_results_proctor_facebook.jpg",
+          "background": {
+            "type": "image",
+            "url": "/assets/images/backgrounds/aerial_track_dark.jpg",
+            "darkness": 0.5
+          },
+          "elements": [
+            {
+              "type": "text",
+              "text": "RACE RESULTS",
+              "left": 600,
+              "top": 80,
+              "fontFamily": "Racing Sans One",
+              "fontSize": 90,
+              "fill": "#FFDD00",
+              "textAlign": "center",
+              "id": "headline_text"
+            },
+            {
+              "type": "text",
+              "text": "April 15, 2025",
+              "left": 600,
+              "top": 170,
+              "fontFamily": "Oswald",
+              "fontSize": 40,
+              "fill": "#FFFFFF",
+              "textAlign": "center",
+              "id": "date_text"
+            },
+            {
+              "type": "text",
+              "text": "LATE MODEL DIVISION",
+              "left": 600,
+              "top": 250,
+              "fontFamily": "Racing Sans One",
+              "fontSize": 50,
+              "fill": "#C0C0C0",
+              "textAlign": "center",
+              "id": "division_text"
+            },
+            {
+              "type": "text",
+              "text": "1st: John Smith #42",
+              "left": 600,
+              "top": 330,
+              "fontFamily": "Oswald",
+              "fontSize": 36,
+              "fill": "#FFFFFF",
+              "textAlign": "center",
+              "id": "first_place"
+            },
+            {
+              "type": "text",
+              "text": "2nd: Mike Johnson #17",
+              "left": 600,
+              "top": 380,
+              "fontFamily": "Oswald",
+              "fontSize": 36,
+              "fill": "#FFFFFF",
+              "textAlign": "center",
+              "id": "second_place"
+            },
+            {
+              "type": "text",
+              "text": "3rd: Sarah Williams #88",
+              "left": 600,
+              "top": 430,
+              "fontFamily": "Oswald",
+              "fontSize": 36,
+              "fill": "#FFFFFF",
+              "textAlign": "center",
+              "id": "third_place"
+            },
+            {
+              "type": "shape",
+              "shape": "rect",
+              "left": 0,
+              "top": 570,
+              "width": 1200,
+              "height": 60,
+              "fill": "#D12026",
+              "id": "footer_bg"
+            },
+            {
+              "type": "text",
+              "text": "HALVOR LINES SPEEDWAY",
+              "left": 600,
+              "top": 600,
+              "fontFamily": "Racing Sans One",
+              "fontSize": 36,
+              "fill": "#FFFFFF",
+              "textAlign": "center",
+              "id": "footer_text"
+            }
+          ]
+        },
+        {
+          "id": "race_results_instagram",
+          "name": "Race Results - Instagram (Standard)",
+          "description": "Standard template for posting race results on Instagram",
+          "platform": "Instagram",
+          "width": 1080,
+          "height": 1080,
+          "thumbnail": "/assets/images/templates/race_results_instagram.jpg",
+          "elements": [
+            {
+              "type": "background",
+              "color": "#000000"
+            },
+            {
+              "type": "shape",
+              "shape": "rect",
+              "left": 0,
+              "top": 0,
+              "width": 1080,
+              "height": 120,
+              "fill": "#D12026",
+              "id": "header_bg"
+            },
+            {
+              "type": "text",
+              "text": "RACE RESULTS",
+              "left": 540,
+              "top": 60,
+              "fontFamily": "Racing Sans One",
+              "fontSize": 60,
+              "fill": "#FFFFFF",
+              "textAlign": "center",
+              "id": "header_text"
+            },
+            {
+              "type": "text",
+              "text": "April 15, 2025",
+              "left": 540,
+              "top": 160,
+              "fontFamily": "Oswald",
+              "fontSize": 36,
+              "fill": "#FFFFFF",
+              "textAlign": "center",
+              "id": "date_text"
+            },
+            {
+              "type": "shape",
+              "shape": "rect",
+              "left": 90,
+              "top": 220,
+              "width": 900,
+              "height": 700,
+              "fill": "#FFFFFF",
+              "opacity": 0.9,
+              "rx": 10,
+              "ry": 10,
+              "id": "results_bg"
+            },
+            {
+              "type": "text",
+              "text": "LATE MODEL DIVISION",
+              "left": 540,
+              "top": 270,
+              "fontFamily": "Racing Sans One",
+              "fontSize": 40,
+              "fill": "#D12026",
+              "textAlign": "center",
+              "id": "division_text"
+            },
+            {
+              "type": "text",
+              "text": "1st Place: John Smith #42",
+              "left": 540,
+              "top": 350,
+              "fontFamily": "Oswald",
+              "fontSize": 32,
+              "fill": "#000000",
+              "textAlign": "center",
+              "id": "first_place"
+            },
+            {
+              "type": "text",
+              "text": "2nd Place: Mike Johnson #17",
+              "left": 540,
+              "top": 420,
+              "fontFamily": "Oswald",
+              "fontSize": 32,
+              "fill": "#000000",
+              "textAlign": "center",
+              "id": "second_place"
+            },
+            {
+              "type": "text",
+              "text": "3rd Place: Sarah Williams #88",
+              "left": 540,
+              "top": 490,
+              "fontFamily": "Oswald",
+              "fontSize": 32,
+              "fill": "#000000",
+              "textAlign": "center",
+              "id": "third_place"
+            },
+            {
+              "type": "text",
+              "text": "4th Place: David Brown #23",
+              "left": 540,
+              "top": 560,
+              "fontFamily": "Oswald",
+              "fontSize": 32,
+              "fill": "#000000",
+              "textAlign": "center",
+              "id": "fourth_place"
+            },
+            {
+              "type": "text",
+              "text": "5th Place: Lisa Garcia #55",
+              "left": 540,
+              "top": 630,
+              "fontFamily": "Oswald",
+              "fontSize": 32,
+              "fill": "#000000",
+              "textAlign": "center",
+              "id": "fifth_place"
+            },
+            {
+              "type": "shape",
+              "shape": "rect",
+              "left": 0,
+              "top": 960,
+              "width": 1080,
+              "height": 120,
+              "fill": "#D12026",
+              "id": "footer_bg"
+            },
+            {
+              "type": "text",
+              "text": "HALVOR LINES SPEEDWAY",
+              "left": 540,
+              "top": 1020,
+              "fontFamily": "Racing Sans One",
+              "fontSize": 48,
+              "fill": "#FFFFFF",
+              "textAlign": "center",
+              "id": "footer_text"
+            }
+          ]
+        }
+      ]
     },
     {
-      "id": "bus_races",
-      "name": "Bus Races",
-      "description": "Templates for promoting the Bus Races special event"
-    },
-    {
-      "id": "silver_1000",
-      "name": "Silver 1000",
-      "description": "Templates for promoting the Silver 1000 championship event"
-    },
-    {
-      "id": "email",
-      "name": "Email Templates",
-      "description": "Templates for email marketing campaigns"
-    },
-    {
-      "id": "website",
-      "name": "Website Content",
-      "description": "Templates for website banners and content"
+      "id": "special_events",
+      "name": "Special Events",
+      "description": "Templates for promoting special events like Bus Races and Silver 1000",
+      "templates": [
+        {
+          "id": "bus_races_facebook",
+          "name": "Bus Races - Facebook (Standard)",
+          "description": "Standard template for promoting Bus Races on Facebook",
+          "platform": "Facebook",
+          "width": 1200,
+          "height": 630,
+          "thumbnail": "/assets/images/templates/bus_races_facebook.jpg",
+          "elements": [
+            {
+              "type": "background",
+              "color": "#FFDD00"
+            },
+            {
+              "type": "shape",
+              "shape": "rect",
+              "left": 0,
+              "top": 0,
+              "width": 1200,
+              "height": 120,
+              "fill": "#D12026",
+              "id": "header_bg"
+            },
+            {
+              "type": "text",
+              "text": "SPECIAL EVENT",
+              "left": 600,
+              "top": 60,
+              "fontFamily": "Racing Sans One",
+              "fontSize": 60,
+              "fill": "#FFFFFF",
+              "textAlign": "center",
+              "id": "header_text"
+            },
+            {
+              "type": "text",
+              "text": "BUS RACES",
+              "left": 600,
+              "top": 200,
+              "fontFamily": "Racing Sans One",
+              "fontSize": 100,
+              "fill": "#000000",
+              "textAlign": "center",
+              "fontWeight": "bold",
+              "id": "event_title"
+            },
+            {
+              "type": "text",
+              "text": "SATURDAY, JUNE 15, 2025",
+              "left": 600,
+              "top": 320,
+              "fontFamily": "Oswald",
+              "fontSize": 48,
+              "fill": "#D12026",
+              "textAlign": "center",
+              "fontWeight": "bold",
+              "id": "event_date"
+            },
+            {
+              "type": "text",
+              "text": "Gates Open: 5:00 PM | Racing Starts: 7:00 PM",
+              "left": 600,
+              "top": 380,
+              "fontFamily": "Oswald",
+              "fontSize": 32,
+              "fill": "#000000",
+              "textAlign": "center",
+              "id": "event_time"
+            },
+            {
+              "type": "text",
+              "text": "Adults: $15 | Kids (12 & under): $5",
+              "left": 600,
+              "top": 440,
+              "fontFamily": "Oswald",
+              "fontSize": 32,
+              "fill": "#000000",
+              "textAlign": "center",
+              "id": "ticket_prices"
+            },
+            {
+              "type": "shape",
+              "shape": "rect",
+              "left": 0,
+              "top": 510,
+              "width": 1200,
+              "height": 120,
+              "fill": "#D12026",
+              "id": "footer_bg"
+            },
+            {
+              "type": "text",
+              "text": "HALVOR LINES SPEEDWAY",
+              "left": 600,
+              "top": 570,
+              "fontFamily": "Racing Sans One",
+              "fontSize": 48,
+              "fill": "#FFFFFF",
+              "textAlign": "center",
+              "id": "footer_text"
+            }
+          ]
+        },
+        {
+          "id": "silver_1000_facebook",
+          "name": "Silver 1000 - Facebook (Standard)",
+          "description": "Standard template for promoting Silver 1000 on Facebook",
+          "platform": "Facebook",
+          "width": 1200,
+          "height": 630,
+          "thumbnail": "/assets/images/templates/silver_1000_facebook.jpg",
+          "elements": [
+            {
+              "type": "background",
+              "color": "#000000"
+            },
+            {
+              "type": "shape",
+              "shape": "rect",
+              "left": 0,
+              "top": 0,
+              "width": 1200,
+              "height": 120,
+              "fill": "#D12026",
+              "id": "header_bg"
+            },
+            {
+              "type": "text",
+              "text": "CHAMPIONSHIP EVENT",
+              "left": 600,
+              "top": 60,
+              "fontFamily": "Racing Sans One",
+              "fontSize": 60,
+              "fill": "#FFFFFF",
+              "textAlign": "center",
+              "id": "header_text"
+            },
+            {
+              "type": "text",
+              "text": "SILVER 1000",
+              "left": 600,
+              "top": 200,
+              "fontFamily": "Racing Sans One",
+              "fontSize": 120,
+              "fill": "#C0C0C0",
+              "textAlign": "center",
+              "fontWeight": "bold",
+              "id": "event_title"
+            },
+            {
+              "type": "text",
+              "text": "SATURDAY, SEPTEMBER 7, 2025",
+              "left": 600,
+              "top": 320,
+              "fontFamily": "Oswald",
+              "fontSize": 48,
+              "fill": "#FFFFFF",
+              "textAlign": "center",
+              "fontWeight": "bold",
+              "id": "event_date"
+            },
+            {
+              "type": "text",
+              "text": "The Biggest Race of the Season!",
+              "left": 600,
+              "top": 380,
+              "fontFamily": "Oswald",
+              "fontSize": 36,
+              "fill": "#FFDD00",
+              "textAlign": "center",
+              "id": "tagline"
+            },
+            {
+              "type": "text",
+              "text": "Tickets On Sale Now!",
+              "left": 600,
+              "top": 440,
+              "fontFamily": "Oswald",
+              "fontSize": 32,
+              "fill": "#FFFFFF",
+              "textAlign": "center",
+              "id": "ticket_info"
+            },
+            {
+              "type": "shape",
+              "shape": "rect",
+              "left": 0,
+              "top": 510,
+              "width": 1200,
+              "height": 120,
+              "fill": "#D12026",
+              "id": "footer_bg"
+            },
+            {
+              "type": "text",
+              "text": "HALVOR LINES SPEEDWAY",
+              "left": 600,
+              "top": 570,
+              "fontFamily": "Racing Sans One",
+              "fontSize": 48,
+              "fill": "#FFFFFF",
+              "textAlign": "center",
+              "id": "footer_text"
+            }
+          ]
+        },
+         {
+          "id": "silver_1000_proctor_facebook",
+          "name": "Silver 1000 - Facebook (Proctor Style)",
+          "description": "Proctor-style template for Silver 1000 on Facebook",
+          "platform": "Facebook",
+          "width": 1200,
+          "height": 630,
+          "thumbnail": "/assets/images/templates/silver_1000_proctor_facebook.jpg",
+          "background": {
+            "type": "image",
+            "url": "/assets/images/backgrounds/aerial_track_dark_2.jpg",
+            "darkness": 0.6
+          },
+          "elements": [
+            {
+              "type": "text",
+              "text": "SILVER 1000",
+              "left": 600,
+              "top": 150,
+              "fontFamily": "Racing Sans One",
+              "fontSize": 120,
+              "fill": "#FFDD00", 
+              "textAlign": "center",
+              "id": "headline_text"
+            },
+            {
+              "type": "text",
+              "text": "SEPTEMBER 7, 2025",
+              "left": 600,
+              "top": 280,
+              "fontFamily": "Oswald",
+              "fontSize": 50,
+              "fill": "#FFFFFF",
+              "textAlign": "center",
+              "id": "date_text"
+            },
+            {
+              "type": "text",
+              "text": "WISSOTA LATE MODELS | WISSOTA MODIFIEDS",
+              "left": 600,
+              "top": 360,
+              "fontFamily": "Oswald",
+              "fontSize": 36,
+              "fill": "#C0C0C0",
+              "textAlign": "center",
+              "id": "classes_text"
+            },
+            {
+              "type": "text",
+              "text": "GATES OPEN 4 PM | HOT LAPS 6:30 PM | RACING 7 PM",
+              "left": 600,
+              "top": 420,
+              "fontFamily": "Oswald",
+              "fontSize": 28,
+              "fill": "#FFFFFF",
+              "textAlign": "center",
+              "id": "times_text"
+            },
+            {
+              "type": "shape",
+              "shape": "rect",
+              "left": 0,
+              "top": 570,
+              "width": 1200,
+              "height": 60,
+              "fill": "#D12026",
+              "id": "footer_bg"
+            },
+            {
+              "type": "text",
+              "text": "HALVOR LINES SPEEDWAY",
+              "left": 600,
+              "top": 600,
+              "fontFamily": "Racing Sans One",
+              "fontSize": 36,
+              "fill": "#FFFFFF",
+              "textAlign": "center",
+              "id": "footer_text"
+            }
+          ]
+        }
+      ]
     }
   ]
 }
+

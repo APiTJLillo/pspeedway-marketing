@@ -1,4 +1,4 @@
-# GitHub Pages Research Findings for Halverson Speedway Marketing Tool
+# GitHub Pages Research Findings for Halvor Lines Speedway Marketing Tool
 
 ## GitHub Pages Capabilities and Limitations
 
@@ -48,7 +48,7 @@
 - Can be loaded dynamically from repository files
 - User customizations can be handled in-browser
 
-## Feasible Approach for Halverson Speedway Tool
+## Feasible Approach for Halvor Lines Speedway Tool
 
 ### Architecture
 1. Static GitHub Pages site with HTML, CSS, and JavaScript
@@ -84,3 +84,4 @@
 4. Build content creation tools
 5. Add export capabilities
 6. Deploy and document the solution
+

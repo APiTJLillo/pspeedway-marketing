@@ -1,6 +1,6 @@
-# Halverson Speedway Marketing Tool - Color Scheme
+# Halvor Lines Speedway Marketing Tool - Color Scheme
 
-Based on the Halverson Speedway (Proctor Speedway) website, the following color scheme will be used for the marketing tool:
+Based on the Halvor Lines Speedway (Proctor Speedway) website, the following color scheme will be used for the marketing tool:
 
 ## Primary Colors
 - **Red**: #D12026 (Primary brand color, used in logo and headers)
@@ -36,4 +36,4 @@ Based on the Halverson Speedway (Proctor Speedway) website, the following color 
 - **Overlay Background**: rgba(0,0,0,0.7) (Semi-transparent black)
 - **Highlight Overlay**: rgba(255,221,0,0.2) (Semi-transparent yellow)
 
-This color scheme maintains the branding identity of Halverson Speedway while providing sufficient contrast and visual hierarchy for the marketing tool interface.
+This color scheme maintains the branding identity of Halvor Lines Speedway while providing sufficient contrast and visual hierarchy for the marketing tool interface.

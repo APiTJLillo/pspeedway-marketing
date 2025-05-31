@@ -1,185 +1,299 @@
-// Halverson Speedway Marketing Tool - Image Upload Handler
+/* Halverson Speedway Marketing Tool - Image Upload Handler */
 
 class ImageUploadHandler {
-    constructor(canvas, fabricCanvas) {
-        this.canvas = canvas;
-        this.fabricCanvas = fabricCanvas;
-        this.uploadedImages = {};
+    constructor(editor) {
+        this.editor = editor;
+        this.uploadedImages = [];
+        this.maxFileSize = 5 * 1024 * 1024; // 5MB
+        this.allowedTypes = ['image/jpeg', 'image/png', 'image/gif', 'image/webp'];
+        this.initialized = false;
     }
     
     initialize() {
-        // Create image upload container
-        this.createImageUploadContainer();
+        // Create image upload controls
+        this.createImageControls();
         
-        // Initialize event listeners
-        this.initializeEventListeners();
+        // Load previously uploaded images from storage
+        this.loadSavedImages();
+        
+        this.initialized = true;
     }
     
-    createImageUploadContainer() {
+    createImageControls() {
+        // Find the control panel
         const controlPanel = document.querySelector('.control-panel');
+        if (!controlPanel) return;
         
-        // Create image upload section
+        // Create image section after font section
+        const fontSection = controlPanel.querySelector('div:nth-child(3)');
+        if (!fontSection) return;
+        
+        // Create image section
         const imageSection = document.createElement('div');
         imageSection.className = 'mb-6';
         imageSection.innerHTML = `
             <h3 class="font-bold mb-2 font-oswald">Images</h3>
-            <div class="mb-4">
-                <label class="block text-sm font-medium text-gray-700 mb-1">Upload Image</label>
-                <input type="file" id="image-upload" accept="image/*" class="w-full border border-gray-300 rounded p-2">
-                <p class="text-xs text-gray-500 mt-1">Recommended size: 1200x1200px or larger</p>
-            </div>
-            <div id="uploaded-images" class="grid grid-cols-2 gap-2 mb-4">
-                <!-- Uploaded images will appear here -->
+            <div id="image-controls">
+                <div class="mb-4">
+                    <label class="block text-sm font-medium text-gray-700 mb-1">Upload Image</label>
+                    <div class="flex items-center">
+                        <label class="flex flex-col items-center px-4 py-2 bg-white text-red-600 rounded-lg border border-red-600 cursor-pointer hover:bg-red-600 hover:text-white">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-8l-4-4m0 0l-4 4m4-4v12" />
+                            </svg>
+                            <span class="mt-1 text-sm">Select Image</span>
+                            <input id="image-upload" type="file" class="hidden" accept="image/*" />
+                        </label>
+                    </div>
+                </div>
+                
+                <div class="mb-4">
+                    <label class="block text-sm font-medium text-gray-700 mb-1">Your Images</label>
+                    <div id="image-library" class="grid grid-cols-3 gap-2 max-h-40 overflow-y-auto p-2 bg-gray-100 rounded">
+                        <p class="text-gray-500 text-sm col-span-3">No images uploaded yet</p>
+                    </div>
+                </div>
+                
+                <div id="selected-image-controls" class="hidden">
+                    <label class="block text-sm font-medium text-gray-700 mb-1">Selected Image</label>
+                    <div class="flex items-center space-x-2">
+                        <button id="add-selected-image" class="px-2 py-1 bg-red-600 text-white text-sm rounded">
+                            Add to Canvas
+                        </button>
+                        <button id="remove-selected-image" class="px-2 py-1 bg-gray-200 text-gray-800 text-sm rounded">
+                            Remove
+                        </button>
+                    </div>
+                </div>
             </div>
         `;
         
-        // Insert before the Actions section
-        const actionsSection = controlPanel.querySelector('div:last-child');
-        controlPanel.insertBefore(imageSection, actionsSection);
+        // Insert after font section
+        fontSection.after(imageSection);
+        
+        // Add event listeners
+        this.setupEventListeners();
     }
     
-    initializeEventListeners() {
-        // Image upload handler
+    setupEventListeners() {
+        // Image upload
         const imageUpload = document.getElementById('image-upload');
-        imageUpload.addEventListener('change', (e) => {
-            this.handleImageUpload(e.target.files[0]);
-        });
+        if (imageUpload) {
+            imageUpload.addEventListener('change', this.handleImageUpload.bind(this));
+        }
+        
+        // Add selected image button
+        const addSelectedImage = document.getElementById('add-selected-image');
+        if (addSelectedImage) {
+            addSelectedImage.addEventListener('click', this.addSelectedImageToCanvas.bind(this));
+        }
+        
+        // Remove selected image button
+        const removeSelectedImage = document.getElementById('remove-selected-image');
+        if (removeSelectedImage) {
+            removeSelectedImage.addEventListener('click', this.removeSelectedImage.bind(this));
+        }
     }
     
-    handleImageUpload(file) {
+    handleImageUpload(e) {
+        const file = e.target.files[0];
         if (!file) return;
         
+        // Check file size
+        if (file.size > this.maxFileSize) {
+            notifications.show('Image is too large. Maximum size is 5MB.', 'error');
+            return;
+        }
+        
         // Check file type
-        if (!file.type.match('image.*')) {
-            alert('Please select an image file.');
+        if (!this.allowedTypes.includes(file.type)) {
+            notifications.show('Invalid file type. Please upload a JPEG, PNG, or GIF image.', 'error');
             return;
         }
         
-        // Check file size (max 5MB)
-        if (file.size > 5 * 1024 * 1024) {
-            alert('Image size should be less than 5MB.');
-            return;
-        }
-        
+        // Read file
         const reader = new FileReader();
-        reader.onload = (e) => {
-            const imgData = e.target.result;
+        reader.onload = (event) => {
+            const imageData = {
+                id: utils.generateId('img'),
+                name: file.name,
+                src: event.target.result,
+                type: file.type,
+                size: file.size,
+                date: new Date().toISOString()
+            };
             
-            // Create image element
-            fabric.Image.fromURL(imgData, (img) => {
-                // Scale image if it's too large
-                if (img.width > this.fabricCanvas.width || img.height > this.fabricCanvas.height) {
-                    const scale = Math.min(
-                        this.fabricCanvas.width / img.width,
-                        this.fabricCanvas.height / img.height
-                    ) * 0.8; // 80% of max size
-                    
-                    img.scale(scale);
-                }
-                
-                // Center image on canvas
-                img.set({
-                    left: this.fabricCanvas.width / 2,
-                    top: this.fabricCanvas.height / 2,
-                    originX: 'center',
-                    originY: 'center'
-                });
-                
-                // Add to canvas
-                this.fabricCanvas.add(img);
-                this.fabricCanvas.setActiveObject(img);
-                this.fabricCanvas.renderAll();
-                
-                // Add to uploaded images
-                const imageId = `img_${Date.now()}`;
-                this.uploadedImages[imageId] = {
-                    id: imageId,
-                    src: imgData,
-                    name: file.name
-                };
-                
-                // Add to uploaded images container
-                this.addImageToContainer(imageId, imgData, file.name);
-            });
+            // Add to uploaded images
+            this.uploadedImages.push(imageData);
+            
+            // Save to storage
+            this.saveImagesToStorage();
+            
+            // Update image library
+            this.updateImageLibrary();
+            
+            // Reset file input
+            e.target.value = '';
+            
+            // Show notification
+            notifications.show('Image uploaded successfully', 'success');
         };
         
         reader.readAsDataURL(file);
     }
     
-    addImageToContainer(id, src, name) {
-        const container = document.getElementById('uploaded-images');
+    updateImageLibrary() {
+        const imageLibrary = document.getElementById('image-library');
+        if (!imageLibrary) return;
         
-        const imageDiv = document.createElement('div');
-        imageDiv.className = 'border rounded p-1 relative';
-        imageDiv.innerHTML = `
-            <img src="${src}" alt="${name}" class="w-full h-16 object-cover">
-            <button class="absolute top-0 right-0 bg-red-600 text-white rounded-full w-5 h-5 flex items-center justify-center" data-id="${id}">×</button>
-            <p class="text-xs truncate">${name}</p>
-        `;
+        // Clear library
+        imageLibrary.innerHTML = '';
         
-        // Add delete button event listener
-        const deleteButton = imageDiv.querySelector('button');
-        deleteButton.addEventListener('click', () => {
-            this.removeImage(id);
-            container.removeChild(imageDiv);
-        });
+        if (this.uploadedImages.length === 0) {
+            imageLibrary.innerHTML = '<p class="text-gray-500 text-sm col-span-3">No images uploaded yet</p>';
+            return;
+        }
         
-        // Add image click event listener to add to canvas
-        const img = imageDiv.querySelector('img');
-        img.addEventListener('click', () => {
-            this.addImageToCanvas(id);
-        });
-        
-        container.appendChild(imageDiv);
-    }
-    
-    removeImage(id) {
-        delete this.uploadedImages[id];
-    }
-    
-    addImageToCanvas(id) {
-        const imageData = this.uploadedImages[id];
-        if (!imageData) return;
-        
-        fabric.Image.fromURL(imageData.src, (img) => {
-            // Scale image if it's too large
-            if (img.width > this.fabricCanvas.width || img.height > this.fabricCanvas.height) {
-                const scale = Math.min(
-                    this.fabricCanvas.width / img.width,
-                    this.fabricCanvas.height / img.height
-                ) * 0.8; // 80% of max size
+        // Add images to library
+        this.uploadedImages.forEach(image => {
+            const imageElement = document.createElement('div');
+            imageElement.className = 'image-item relative cursor-pointer border hover:border-red-600';
+            imageElement.dataset.id = image.id;
+            imageElement.innerHTML = `
+                <img src="${image.src}" alt="${image.name}" class="w-full h-16 object-cover">
+            `;
+            
+            // Add click event
+            imageElement.addEventListener('click', () => {
+                // Remove selected class from all images
+                document.querySelectorAll('.image-item').forEach(item => {
+                    item.classList.remove('border-red-600');
+                    item.classList.add('border-gray-300');
+                });
                 
+                // Add selected class to clicked image
+                imageElement.classList.remove('border-gray-300');
+                imageElement.classList.add('border-red-600');
+                
+                // Show selected image controls
+                const selectedImageControls = document.getElementById('selected-image-controls');
+                if (selectedImageControls) {
+                    selectedImageControls.classList.remove('hidden');
+                }
+                
+                // Set selected image
+                this.selectedImageId = image.id;
+            });
+            
+            imageLibrary.appendChild(imageElement);
+        });
+    }
+    
+    addSelectedImageToCanvas() {
+        if (!this.selectedImageId) {
+            notifications.show('Please select an image first', 'error');
+            return;
+        }
+        
+        // Find selected image
+        const image = this.uploadedImages.find(img => img.id === this.selectedImageId);
+        if (!image) return;
+        
+        // Add image to canvas
+        fabric.Image.fromURL(image.src, img => {
+            // Scale image to fit within canvas
+            const canvas = this.editor.canvas;
+            const maxWidth = canvas.width * 0.8;
+            const maxHeight = canvas.height * 0.8;
+            
+            if (img.width > maxWidth || img.height > maxHeight) {
+                const scale = Math.min(maxWidth / img.width, maxHeight / img.height);
                 img.scale(scale);
             }
             
-            // Center image on canvas
+            // Center image
             img.set({
-                left: this.fabricCanvas.width / 2,
-                top: this.fabricCanvas.height / 2,
-                originX: 'center',
-                originY: 'center'
+                left: canvas.width / 2 - (img.width * img.scaleX) / 2,
+                top: canvas.height / 2 - (img.height * img.scaleY) / 2,
+                id: utils.generateId('canvas_img')
             });
             
-            // Add to canvas
-            this.fabricCanvas.add(img);
-            this.fabricCanvas.setActiveObject(img);
-            this.fabricCanvas.renderAll();
+            // Add custom properties
+            img.toObject = (function(toObject) {
+                return function() {
+                    return fabric.util.object.extend(toObject.call(this), {
+                        id: this.id
+                    });
+                };
+            })(img.toObject);
+            
+            canvas.add(img);
+            canvas.setActiveObject(img);
+            canvas.renderAll();
+            
+            // Save state
+            this.editor.saveState();
+            
+            // Show notification
+            notifications.show('Image added to canvas', 'success');
         });
+    }
+    
+    removeSelectedImage() {
+        if (!this.selectedImageId) {
+            notifications.show('Please select an image first', 'error');
+            return;
+        }
+        
+        // Confirm deletion
+        if (confirm('Are you sure you want to remove this image from your library?')) {
+            // Remove from uploaded images
+            this.uploadedImages = this.uploadedImages.filter(img => img.id !== this.selectedImageId);
+            
+            // Save to storage
+            this.saveImagesToStorage();
+            
+            // Update image library
+            this.updateImageLibrary();
+            
+            // Hide selected image controls
+            const selectedImageControls = document.getElementById('selected-image-controls');
+            if (selectedImageControls) {
+                selectedImageControls.classList.add('hidden');
+            }
+            
+            // Clear selected image
+            this.selectedImageId = null;
+            
+            // Show notification
+            notifications.show('Image removed from library', 'success');
+        }
+    }
+    
+    saveImagesToStorage() {
+        // Save only the last 10 images to prevent storage issues
+        const imagesToSave = this.uploadedImages.slice(-10);
+        storageManager.save('uploadedImages', imagesToSave);
+    }
+    
+    loadSavedImages() {
+        const savedImages = storageManager.load('uploadedImages');
+        if (savedImages && Array.isArray(savedImages)) {
+            this.uploadedImages = savedImages;
+            this.updateImageLibrary();
+        }
     }
 }
 
-// Extend TemplateEditor with image upload functionality
+// Initialize image upload handler when DOM is loaded
 document.addEventListener('DOMContentLoaded', () => {
     // Wait for TemplateEditor to initialize
     const checkEditor = setInterval(() => {
-        if (window.templateEditor && window.templateEditor.canvas) {
+        if (window.templateEditor && window.templateEditor.initialized) {
             clearInterval(checkEditor);
             
             // Initialize image upload handler
-            const imageUploadHandler = new ImageUploadHandler(
-                document.getElementById('editor-canvas'),
-                window.templateEditor.canvas
-            );
+            const imageUploadHandler = new ImageUploadHandler(window.templateEditor);
             imageUploadHandler.initialize();
         }
     }, 100);

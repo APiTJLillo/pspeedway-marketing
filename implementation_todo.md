@@ -1,4 +1,4 @@
-# Halverson Speedway Marketing Tool - Implementation Todo List
+# Halvor Lines Speedway Marketing Tool - Implementation Todo List
 
 ## Phase 1: Project Setup and Basic Structure
 
@@ -17,7 +17,7 @@
 
 ### Asset Organization
 - [ ] Create directory structure for assets
-- [ ] Add Halverson Speedway logo and branding elements
+- [ ] Add Halvor Lines Speedway logo and branding elements
 - [ ] Prepare template background images
 - [ ] Optimize all images for web use
 - [ ] Add racing-themed fonts (Racing Sans One, Oswald)
@@ -154,3 +154,4 @@
 - [ ] Plan for future feature additions
 - [ ] Establish maintenance schedule
 - [ ] Document update process for templates and strategies
+

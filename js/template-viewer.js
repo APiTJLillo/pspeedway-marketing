@@ -2,9 +2,8 @@
 
 class TemplateViewer {
     constructor() {
-        this.templates = [];
         this.categories = [];
-        this.currentCategory = 'race_results'; // Default category
+        this.currentCategory = null;
         this.templateContainer = document.getElementById('template-container');
         this.categoryLinks = document.querySelectorAll('.category-link');
     }
@@ -12,14 +11,18 @@ class TemplateViewer {
     async initialize() {
         try {
             // Load template data
-            const response = await fetch('assets/templates/template-data.json');
+            const response = await fetch('/assets/templates/template-data.json');
             if (!response.ok) {
                 throw new Error('Failed to load template data');
             }
             
             const data = await response.json();
-            this.templates = data.templates;
             this.categories = data.categories;
+            
+            // Set default category to first category in the list
+            if (this.categories.length > 0) {
+                this.currentCategory = this.categories[0].id;
+            }
             
             // Initialize category links
             this.initializeCategoryLinks();
@@ -30,116 +33,124 @@ class TemplateViewer {
             return true;
         } catch (error) {
             console.error('Error initializing template viewer:', error);
+            this.showErrorMessage('Failed to load templates. Please try refreshing the page.');
             return false;
         }
     }
     
     initializeCategoryLinks() {
         this.categoryLinks.forEach(link => {
-            link.addEventListener('click', (e) => {
-                e.preventDefault();
+            const categoryId = link.getAttribute('data-category');
+            
+            // Check if this category exists in our data
+            const categoryExists = this.categories.some(c => c.id === categoryId);
+            
+            if (categoryExists) {
+                link.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    
+                    // Remove active class from all links
+                    this.categoryLinks.forEach(l => {
+                        l.classList.remove('bg-red-600', 'text-white');
+                        l.classList.add('hover:bg-gray-100');
+                    });
+                    
+                    // Add active class to clicked link
+                    link.classList.add('bg-red-600', 'text-white');
+                    link.classList.remove('hover:bg-gray-100');
+                    
+                    // Get category ID from data attribute
+                    this.currentCategory = categoryId;
+                    
+                    // Update page title
+                    const categoryName = this.categories.find(c => c.id === categoryId)?.name || 'Templates';
+                    document.getElementById('category-title').textContent = `${categoryName} Templates`;
+                    
+                    // Load templates for selected category
+                    this.loadTemplatesByCategory(categoryId);
+                });
                 
-                // Remove active class from all links
-                this.categoryLinks.forEach(l => l.classList.remove('bg-red-600', 'text-white'));
-                l.classList.add('hover:bg-gray-100');
-                
-                // Add active class to clicked link
-                link.classList.add('bg-red-600', 'text-white');
-                link.classList.remove('hover:bg-gray-100');
-                
-                // Get category ID from data attribute
-                const categoryId = link.getAttribute('data-category');
-                this.currentCategory = categoryId;
-                
-                // Update page title
-                const categoryName = this.categories.find(c => c.id === categoryId)?.name || 'Templates';
-                document.getElementById('category-title').textContent = `${categoryName} Templates`;
-                
-                // Load templates for selected category
-                this.loadTemplatesByCategory(categoryId);
-            });
+                // If this is the default category, mark it as active
+                if (categoryId === this.currentCategory) {
+                    link.classList.add('bg-red-600', 'text-white');
+                    link.classList.remove('hover:bg-gray-100');
+                }
+            }
         });
     }
     
     loadTemplatesByCategory(categoryId) {
-        // Filter templates by category
-        const filteredTemplates = this.templates.filter(template => template.category === categoryId);
+        if (!this.templateContainer) return;
         
         // Clear template container
-        if (this.templateContainer) {
-            this.templateContainer.innerHTML = '';
-            
-            if (filteredTemplates.length === 0) {
-                this.templateContainer.innerHTML = `
-                    <div class="text-center py-8">
-                        <p class="text-gray-500">No templates found for this category.</p>
-                    </div>
-                `;
-                return;
-            }
-            
-            // Create template cards
-            filteredTemplates.forEach(template => {
-                const card = this.createTemplateCard(template);
-                this.templateContainer.appendChild(card);
-            });
+        this.templateContainer.innerHTML = '';
+        
+        // Find the category
+        const category = this.categories.find(c => c.id === categoryId);
+        if (!category || !category.templates || category.templates.length === 0) {
+            this.showNoTemplatesMessage();
+            return;
         }
+        
+        // Update page title
+        const categoryTitle = document.getElementById('category-title');
+        if (categoryTitle) {
+            categoryTitle.textContent = `${category.name} Templates`;
+        }
+        
+        // Create template cards
+        category.templates.forEach(template => {
+            const card = this.createTemplateCard(template, category);
+            this.templateContainer.appendChild(card);
+        });
     }
     
-    createTemplateCard(template) {
+    createTemplateCard(template, category) {
         const card = document.createElement('div');
         card.className = 'border rounded-lg overflow-hidden hover:shadow-lg transition-shadow template-card';
         
-        // Create preview image or placeholder
-        const previewHeight = template.category === 'twitter' ? 'h-32' : 'h-40';
+        // Create preview image with fallback
+        const previewHeight = 'h-40';
+        const platformText = template.platform ? `${template.platform} Template` : 'Template';
         
         card.innerHTML = `
             <div class="${previewHeight} bg-gray-200 relative">
-                <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center">
-                    <div class="text-center text-white p-4">
+                <div class="absolute inset-0 flex items-center justify-center">
+                    <div class="text-center text-white p-4 z-10">
                         <h3 class="font-racing text-xl">${template.name.split(' - ')[0].toUpperCase()}</h3>
-                        <p class="font-oswald">${template.platform.charAt(0).toUpperCase() + template.platform.slice(1)} Template</p>
+                        <p class="font-oswald">${platformText}</p>
                     </div>
                 </div>
+                <div class="absolute inset-0 bg-black bg-opacity-50"></div>
             </div>
             <div class="p-4">
                 <h3 class="font-bold mb-2 font-oswald">${template.name}</h3>
                 <p class="text-sm text-gray-600 mb-4">${template.description}</p>
-                <button class="bg-red-600 hover:bg-yellow-400 hover:text-black text-white py-2 px-4 rounded font-oswald customize-button" data-template-id="${template.id}">
+                <a href="/editor.html?template=${template.id}" class="inline-block bg-red-600 hover:bg-yellow-400 hover:text-black text-white py-2 px-4 rounded font-oswald customize-button" data-template-id="${template.id}">
                     Customize
-                </button>
+                </a>
             </div>
         `;
-        
-        // Add event listener to customize button
-        const customizeButton = card.querySelector('.customize-button');
-        customizeButton.addEventListener('click', () => {
-            this.openTemplateEditor(template.id);
-        });
         
         return card;
     }
     
-    openTemplateEditor(templateId) {
-        // In a real implementation, this would navigate to the editor page
-        // For now, we'll just log the action
-        console.log(`Opening editor for template: ${templateId}`);
-        
-        // Get template data
-        const template = this.templates.find(t => t.id === templateId);
-        if (!template) {
-            console.error(`Template not found: ${templateId}`);
-            return;
+    showNoTemplatesMessage() {
+        this.templateContainer.innerHTML = `
+            <div class="text-center py-8">
+                <p class="text-gray-500">No templates found for this category.</p>
+            </div>
+        `;
+    }
+    
+    showErrorMessage(message) {
+        if (this.templateContainer) {
+            this.templateContainer.innerHTML = `
+                <div class="text-center py-8">
+                    <p class="text-red-500">${message}</p>
+                </div>
+            `;
         }
-        
-        // Store selected template in localStorage for the editor page
-        localStorage.setItem('selectedTemplate', JSON.stringify(template));
-        
-        // Navigate to editor page (to be implemented)
-        // window.location.href = 'editor.html';
-        
-        // For demonstration, show a modal or alert
-        alert(`Template selected: ${template.name}\n\nIn the full implementation, this would open the editor page.`);
     }
 }
 

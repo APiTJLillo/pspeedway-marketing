@@ -1,6 +1,6 @@
-# Halverson Speedway Marketing Tool
+# Halvor Lines Speedway Marketing Tool
 
-A web-based marketing content creator for Halverson Speedway that allows staff to easily create, customize, and export marketing materials for social media, email, and website use.
+A web-based marketing content creator for Halvor Lines Speedway that allows staff to easily create, customize, and export marketing materials for social media, email, and website use.
 
 ## Features
 
@@ -35,4 +35,5 @@ This site is deployed using GitHub Pages.
 
 ## License
 
-Copyright © 2025 Halverson Speedway. All rights reserved.
+Copyright © 2025 Halvor Lines Speedway. All rights reserved.
+

@@ -1,4 +1,4 @@
-// Halverson Speedway Marketing Tool - Advanced Text Editor
+// Halvor Lines Speedway Marketing Tool - Advanced Text Editor
 
 class AdvancedTextEditor {
     constructor(canvas) {

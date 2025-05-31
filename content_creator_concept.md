@@ -1,15 +1,15 @@
-# Web-Based Content Creator Concept for Halverson Speedway
+# Web-Based Content Creator Concept for Halvor Lines Speedway
 
 ## Overview
 
-The Halverson Speedway Marketing Tool will be a GitHub Pages-hosted web application that allows staff to easily create, customize, and export marketing materials based on pre-designed templates. The tool will be entirely client-side, requiring no server infrastructure while providing a user-friendly interface for content creation.
+The Halvor Lines Speedway Marketing Tool will be a GitHub Pages-hosted web application that allows staff to easily create, customize, and export marketing materials based on pre-designed templates. The tool will be entirely client-side, requiring no server infrastructure while providing a user-friendly interface for content creation.
 
 ## User Interface Design
 
 ### Main Layout
 ```
 +-------------------------------------------------------+
-| HALVERSON SPEEDWAY MARKETING TOOL                [?] |
+| HALVOR LINES SPEEDWAY MARKETING TOOL                [?] |
 +-------------------------------------------------------+
 |                                                       |
 | +-------------+  +-------------------------------+    |
@@ -32,7 +32,7 @@ The Halverson Speedway Marketing Tool will be a GitHub Pages-hosted web applicat
 ### Template Editor
 ```
 +-------------------------------------------------------+
-| HALVERSON SPEEDWAY MARKETING TOOL            [BACK]   |
+| HALVOR LINES SPEEDWAY MARKETING TOOL            [BACK]   |
 +-------------------------------------------------------+
 | EDITING: Race Results Template                        |
 +-------------------------------------------------------+
@@ -63,7 +63,7 @@ The Halverson Speedway Marketing Tool will be a GitHub Pages-hosted web applicat
 ### Strategy Browser
 ```
 +-------------------------------------------------------+
-| HALVERSON SPEEDWAY MARKETING TOOL                [?] |
+| HALVOR LINES SPEEDWAY MARKETING TOOL                [?] |
 +-------------------------------------------------------+
 |                                                       |
 | +-------------+  +-------------------------------+    |
@@ -116,7 +116,7 @@ The Halverson Speedway Marketing Tool will be a GitHub Pages-hosted web applicat
 
 ### Component Structure
 ```
-Halverson Marketing Tool
+Halvor Lines Marketing Tool
 ├── App Container
 │   ├── Navigation
 │   ├── Template Browser
@@ -277,7 +277,7 @@ Halverson Marketing Tool
 ### Design
 - Tailwind CSS for styling
 - Responsive design principles
-- Halverson Speedway brand colors and fonts
+- Halvor Lines Speedway brand colors and fonts
 
 ## User Experience Considerations
 
@@ -314,3 +314,4 @@ Halverson Marketing Tool
 2. Develop project structure and repository setup
 3. Implement core functionality proof-of-concept
 4. Gather feedback on initial implementation
+

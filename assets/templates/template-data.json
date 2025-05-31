@@ -34,6 +34,27 @@
       "type": "image",
       "url": "/assets/images/backgrounds/texture_checkered_flag.webp",
       "category": "texture"
+    },
+    {
+      "id": "texture_carbon_fiber_dark",
+      "name": "Carbon Fiber - Dark",
+      "type": "image",
+      "url": "/assets/images/backgrounds/texture_carbon_fiber_dark.jpeg",
+      "category": "texture"
+    },
+    {
+      "id": "texture_metal_brushed",
+      "name": "Brushed Metal",
+      "type": "image",
+      "url": "/assets/images/backgrounds/texture_metal_brushed.webp",
+      "category": "texture"
+    },
+    {
+      "id": "texture_checkered_flag_pattern",
+      "name": "Checkered Flag Pattern",
+      "type": "image",
+      "url": "/assets/images/backgrounds/texture_checkered_flag_pattern.webp",
+      "category": "texture"
     }
   ],
   "categories": [
